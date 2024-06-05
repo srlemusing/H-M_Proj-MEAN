@@ -1,0 +1,185 @@
+
+/* es una fuente obtenida de google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Es la regla de la fuente obtenida, la seteamos en la etiqueta body*/
+body{
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+
+#infGeneral { /*Definimos estilos especificos para el div infGeneral del Home*/
+    background: #e9e6d0;
+    margin: 20px;
+    border-radius: 3px;
+    font-size: smaller;
+    text-align: justify;
+    padding-top: 20px;
+}
+
+#imgPromos { /*Estilos a la img link de las promociones*/
+    width: 190px;
+    border-radius: 51px;
+    -webkit-box-shadow: 10px -47px 174px -4px rgba(89,255,208,1);
+    -moz-box-shadow: 10px -47px 174px -4px rgba(89,255,208,1);
+    box-shadow: 10px -47px 174px -4px rgba(89,255,208,1);
+}
+
+#imgPromos:hover{ /*Estilos a a las promos*/
+    width: 210px;
+    border-radius: 55px;
+    -webkit-box-shadow: 10px -47px 174px -4px rgba(0,0,0,1);
+    -moz-box-shadow: 10px -47px 174px -4px rgba(0,0,0,1);
+    box-shadow: 10px -47px 174px -4px rgba(0,0,0,1);
+}
+
+#footer { /* damos algunos estilos al footer */
+    background: #c6b379; /* Fondo */
+    font-size: 13px; /* Tamaño */
+    padding-top: 15px;
+    padding-bottom: 11px;
+
+}
+
+a.navbar-brand { /* definimos estilos al home denominado H&M */
+    background: #feffff;
+    width: 55px;
+    height: 35px;
+    padding: 4px;
+    text-align: center;
+    border-radius: 12px;
+    border: 4px;
+    border-bottom-style: inset;
+    font-weight: 700;
+}
+
+a.navbar-brand:hover { /* definimos estilos de animacion al home denominado H&M */
+    background: #c6b379;
+}
+
+
+button.btn.btn-outline-success.my-2.my-sm-0 { /* definimos estilos a los botones: enviar, suscribirme */
+    color: white;
+    border-color: aliceblue;
+    background: #996410;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* definimos estilos al contenido del PREfooter en general */
+.footerSedes {
+    font-size: 13px;
+    font-weight: 700;
+    color: aliceblue;
+    background: #7d6917;
+    width: 52px;
+    height: 20px;
+    text-align: center;
+    border-radius: 9px;
+}
+
+.footerTelefonos {
+    font-size: 13px;
+    font-weight: 700;
+    color: aliceblue;
+    background: #7d6917;
+    width: 70px;
+    height: 24px;
+    text-align: center;
+    padding-top: 3px;
+    border-radius: 9px;
+}
+
+.footerHorarios {
+    font-size: 13px;
+    font-weight: 700;
+    color: aliceblue;
+    background: #7d6917;
+    width: 61px;
+    height: 21px;
+    text-align: center;
+    border-radius: 9px;
+}
+
+h6 {
+    font-size: 1rem;
+    color: mintcream;
+    font-weight: 700;
+    padding-top: 9px;
+    margin-bottom: 0.5rem;
+    line-height: 4px;
+}
+
+#LogoSite { /*estilos a la imagen principal*/
+    width: 14%;
+    margin-left: 500px;
+}
+
+.carousel-inner { /*Definimos estilos para el carousel*/
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+    margin: auto;
+    border: #222121;
+    border: 8px;
+}
+
+/* Definimos estilos a los iconos de las redes sociales*/
+
+img#imgInstagram {
+    text-align: center;
+    border-style: none;
+    width: 20px;
+}
+
+img#imgWhatsApp {
+    text-align: center;
+    border-style: none;
+    width: 21px;
+}
+
+#rsociales {
+    background: whitesmoke;
+    color: burlywood;
+    font-size: x-small;
+    align-self: center;
+}
+
+/* Footer, es un dato adicional que aprendí y deseo anexarlo como mi firma al pie del sitio */
+
+#footer.row {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: auto;
+}
+
+footer {
+    /* text-align:center; */
+    background-color: #d9d9da00;
+    color: #222121;
+    font-size: 12px;
+    margin: 3px;
+    width: 60%;
+    margin-left: 2%;
+    height: 13px;
+    padding-bottom: 8px;
+    font-style: oblique;
+}
+
+#HechoPor{
+    font-weight: 700;
+    text-align: center;
+    list-style: none;   
+    text-decoration: none;
+    color: #691919;
+    padding-bottom: 6px;
+}
+
+#HechoPor:hover{
+    background: rgb(255, 255, 16);
+    color: black;
+    -webkit-box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
+    -moz-box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
+    box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
+}

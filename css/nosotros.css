@@ -1,0 +1,204 @@
+
+/* es una fuente obtenida de google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Es la regla de la fuente obtenida, la seteamos en la etiqueta body*/
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+#footer { /* damos algunos estilos al footer */
+    background: #c6b379; /* Fondo */
+    font-size: 13px; /* Tamaño */
+    padding-top: 15px;
+    padding-bottom: 11px;
+}
+
+a.navbar-brand { /* definimos estilos al home denominado H&M */
+    background: #feffff;
+    width: 55px;
+    height: 35px;
+    padding: 4px;
+    text-align: center;
+    border-radius: 12px;
+    border: 4px;
+    border-bottom-style: inset;
+    font-weight: 700;
+}
+
+a.navbar-brand:hover { /* definimos estilos de animacion al home denominado H&M */
+    background: #c6b379;
+}
+
+button.btn.btn-outline-success.my-2.my-sm-0 { /* definimos estilos a los botones: enviar, suscribirme */
+    color: white;
+    border-color: aliceblue;
+    background: #996410;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+button.btn.btn-outline-success.my-2.my-sm-0:hover{ /* definimos hover a los botones: enviar, suscribirme */
+  background: yellow;
+  color: black;
+}
+
+#nosotros { /*Se define una marge global para el div central del contenido (Aqui se efectuó correción)*/
+    margin: 10px;
+    padding-left: 32px;
+}
+
+/* definimos estilos al contenido del PREfooter en general */
+.footerSedes {
+    font-size: 13px;
+    font-weight: 700;
+    color: aliceblue;
+    background: #7d6917;
+    width: 52px;
+    height: 20px;
+    text-align: center;
+    border-radius: 9px;
+}
+
+.footerTelefonos {
+    font-size: 13px;
+    font-weight: 700;
+    color: aliceblue;
+    background: #7d6917;
+    width: 70px;
+    height: 24px;
+    text-align: center;
+    padding-top: 3px;
+    border-radius: 9px;
+}
+
+.footerHorarios {
+    font-size: 13px;
+    font-weight: 700;
+    color: aliceblue;
+    background: #7d6917;
+    width: 61px;
+    height: 21px;
+    text-align: center;
+    border-radius: 9px;
+}
+
+h6 {
+    font-size: 1rem;
+    color: mintcream;
+    font-weight: 700;
+    padding-top: 9px;
+    margin-bottom: 0.5rem;
+    line-height: 4px;
+}
+
+#LogoSite { /*estilos a la imagen principal*/
+    width: 14%;
+    margin-left: 500px;
+}
+
+
+#rowNosotros {
+    color: black;
+    background: rgb(238, 237, 235);
+    width: 90%;
+    padding: 14px;
+    margin-left: 4%;
+}
+
+.col-12.col-sm-12.col-md-6.col-lg-3.col-lx-3 { /* definimos unos estilos a todo el texto del div Nosotros*/
+    font-size: 13px;
+    text-align: justify;
+}
+
+.mision, .vision { /*definimos estilos especificos a las clases mision y vision*/
+    background: #9d882d;
+    color: ghostwhite;
+    font-size: 13px;
+    font-weight: 700;
+    width: 55px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.valores { /*definimos estilos especificos a la clase valores*/
+    background: #9d882d;
+    color: ghostwhite;
+    font-size: 13px;
+    font-weight: 700;
+    width: 61px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.servicios { /*definimos estilos especificos a la clase servicios*/
+    background: #9d882d;
+    color: ghostwhite;
+    font-size: 13px;
+    font-weight: 700;
+    width: 135px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.quienessomos { /*definimos estilos especificos a la clase quienessomos*/
+    background: #9d882d;
+    color: ghostwhite;
+    font-size: 13px;
+    font-weight: 700;
+    width: 108px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.grupoespecialistas { /*definimos estilos especificos a la clase grupoespecilistas*/
+    background: #9d882d;
+    color: ghostwhite;
+    font-size: 13px;
+    font-weight: 700;
+    width: 95px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/*Algunos estilos simples a las fotos de los especialistas*/
+/*Se toma fuente de modelado de imagen desde Clippy*/
+
+/* img { 
+    vertical-align: middle;
+    border-style: outset;
+    outline-width: medium;
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%); 
+} */
+
+/* Footer, es un dato adicional que aprendí y deseo anexarlo como mi firma al pie del sitio */
+
+footer {
+    /* text-align:center; */
+    background-color: #d9d9da00;
+    color: #222121;
+    font-size: 12px;
+    margin: 3px;
+    width: 60%;
+    margin-left: 2%;
+    height: 13px;
+    padding-bottom: 5px;
+    font-style: oblique;
+}
+
+#HechoPor{
+    font-weight: 700;
+    text-align: center;
+    list-style: none;   
+    text-decoration: none;
+    color: #691919;
+    padding-bottom: 3px;
+}
+
+#HechoPor:hover{
+    background: rgb(255, 255, 16);
+    color: black;
+    -webkit-box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
+    -moz-box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
+    box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
+}
