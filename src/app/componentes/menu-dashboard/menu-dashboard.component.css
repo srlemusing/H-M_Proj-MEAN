@@ -2,8 +2,11 @@ div#mimenu {
     border: solid 1px;
     width: 200px;
     background: #d67de5;
-    height: 100vh;
+    height: 95vh;
     float: left;
+    margin-top: 16px;
+    margin-left: 16px;
+    border-radius: 2%;
 }
 
 div#datosusuario img {

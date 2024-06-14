@@ -16,6 +16,8 @@ import { DashboardComponent } from './componentes/dashboard/dashboard.component'
 import { MenuDashboardComponent } from './componentes/menu-dashboard/menu-dashboard.component';
 import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 import { MicuentaComponent } from './componentes/micuenta/micuenta.component';
+import { AdministrarCitasComponent } from './componentes/administrar-citas/administrar-citas.component';
+import { AdministrarTratamientosComponent } from './componentes/administrar-tratamientos/administrar-tratamientos.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { MicuentaComponent } from './componentes/micuenta/micuenta.component';
     DashboardComponent,
     MenuDashboardComponent,
     UsuariosComponent,
-    MicuentaComponent
+    MicuentaComponent,
+    AdministrarCitasComponent,
+    AdministrarTratamientosComponent
   ],
   imports: [
     BrowserModule,
