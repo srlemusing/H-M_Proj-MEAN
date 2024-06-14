@@ -9,6 +9,7 @@ import { CitasComponent } from './componentes/citas/citas.component';
 import { ContactenosComponent } from './componentes/contactenos/contactenos.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { TratamientosComponent } from './componentes/tratamientos/tratamientos.component';
+import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent, pathMatch:"full"},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path:"login",component:LoginComponent, pathMatch:"full"},
   {path:"nosotros",component:NosotrosComponent, pathMatch:"full"},
   {path:"registro",component:RegistroComponent, pathMatch:"full"},
-  {path:"tratamientos",component:TratamientosComponent, pathMatch:"full"}
+  {path:"tratamientos",component:TratamientosComponent, pathMatch:"full"},
+  {path:"dashboard",component:DashboardComponent,pathMatch:"full"}
 ];
 
 @NgModule({

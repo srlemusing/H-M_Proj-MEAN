@@ -12,6 +12,10 @@ import { ContactenosComponent } from './componentes/contactenos/contactenos.comp
 import { TratamientosComponent } from './componentes/tratamientos/tratamientos.component';
 import { CitasComponent } from './componentes/citas/citas.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
+import { DashboardComponent } from './componentes/dashboard/dashboard.component';
+import { MenuDashboardComponent } from './componentes/menu-dashboard/menu-dashboard.component';
+import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
+import { MicuentaComponent } from './componentes/micuenta/micuenta.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
     ContactenosComponent,
     TratamientosComponent,
     CitasComponent,
-    NosotrosComponent
+    NosotrosComponent,
+    DashboardComponent,
+    MenuDashboardComponent,
+    UsuariosComponent,
+    MicuentaComponent
   ],
   imports: [
     BrowserModule,
