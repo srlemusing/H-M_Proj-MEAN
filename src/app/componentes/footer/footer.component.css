@@ -1,0 +1,80 @@
+
+#footer { /* damos algunos estilos al footer */
+    background: #c6b379; /* Fondo */
+    font-size: 13px; /* Tamaño */
+    padding-top: 15px;
+    padding-bottom: 11px;
+
+}
+
+.footerSedes {
+    font-size: 13px;
+    font-weight: 700;
+    color: aliceblue;
+    background: #7d6917;
+    width: 52px;
+    height: 20px;
+    text-align: center;
+    border-radius: 9px;
+}
+
+.footerTelefonos {
+    font-size: 13px;
+    font-weight: 700;
+    color: aliceblue;
+    background: #7d6917;
+    width: 70px;
+    height: 24px;
+    text-align: center;
+    padding-top: 3px;
+    border-radius: 9px;
+}
+
+.footerHorarios {
+    font-size: 13px;
+    font-weight: 700;
+    color: aliceblue;
+    background: #7d6917;
+    width: 61px;
+    height: 21px;
+    text-align: center;
+    border-radius: 9px;
+}
+
+/* Footer, es un dato adicional que aprendí y deseo anexarlo como mi firma al pie del sitio */
+
+#footer.row {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: auto;
+}
+
+footer {
+    /* text-align:center; */
+    background-color: #d9d9da00;
+    color: #222121;
+    font-size: 12px;
+    margin: 3px;
+    width: 60%;
+    margin-left: 2%;
+    height: 13px;
+    padding-bottom: 8px;
+    font-style: oblique;
+}
+
+#HechoPor{
+    font-weight: 700;
+    text-align: center;
+    list-style: none;   
+    text-decoration: none;
+    color: #691919;
+    padding-bottom: 6px;
+}
+
+#HechoPor:hover{
+    background: rgb(255, 255, 16);
+    color: black;
+    -webkit-box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
+    -moz-box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
+    box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
+}
