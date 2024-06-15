@@ -1,50 +1,65 @@
+<app-header> </app-header>
 
 <!--Insertamos un div tipo formulario para que el usuario diligencia sus datos para ponerse en contacto con H&M-->
 
-<div id="datosUsuario">
-<div class="row">
-<div class="form-group col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-    <label for="inputNombre">Nombres Completo</label>
-    <input type="text" class="form-control" id="inputNombre">
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="descripcionCitas">
+                <h1>¡Ingresa tus datos y pronto te contáctaremos!</h1>
+                <p> Queremos escucharte. Diligencia el formato y haznos saber tu opinión, tus datos personales completos y reales nos permiten realizar seguimiento a tu requerimiento. La totalidad de la información que nos suministres será tenida en cuenta para ofrecerte una respuesta clara, veraz y ágil. </p>
+            </div>
+        </div>
+    </div>
 
-<div class="form-group col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-    <label for="inputCorreo">Email</label>
-    <input type="email" class="form-control" id="inputCorreo">
-</div>
+    <div id="datosUsuario">
+    <div class="row">
+        <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <label for="inputNombre">Nombres Completo</label>
+            <input type="text" class="form-control" id="inputNombre">
+        </div>
 
-<div class="form-group col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-    <label for="inputLlamar">Telefono o Celular</label>
-    <input type="int" class="form-control" id="inputLlamar">
-</div>
+        <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <label for="inputCorreo">Email</label>
+            <input type="email" class="form-control" id="inputCorreo">
+        </div>
+    
+        <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <label for="inputLlamar">Telefono o Celular</label>
+        <input type="int" class="form-control" id="inputLlamar">
+        </div>
 
-<div class="form-group col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-    <label for="inputState"> Motivo Consulta </label>
-    <select id="inputState" class="form-control">
-        <option selected>Elige</option>
-        <option>1. Bordes Incisales</option>
-        <option>2. Diseño de Sonrisas</option>
-        <option>3. Microdiseño de Sonrisas</option>
-        <option>4. Coronas Cerámicas</option>
-        <option>5. Incrustaciones</option>
-        <option>6. Aclaramientos Dentales</option>
-        <option>7. Microabrasiones</option>
-        <option>8. Implantes Dentales</option>
-    </select>
-</div>
+        <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <label for="inputState"> Motivo Consulta </label>
+            <select id="inputState" class="form-control">
+            <option selected>Elige</option>
+            <option>1. Bordes Incisales</option>
+            <option>2. Diseño de Sonrisas</option>
+            <option>3. Microdiseño de Sonrisas</option>
+            <option>4. Coronas Cerámicas</option>
+            <option>5. Incrustaciones</option>
+            <option>6. Aclaramientos Dentales</option>
+            <option>7. Microabrasiones</option>
+            <option>8. Implantes Dentales</option>
+            </select>
+        </div>
 
-<div class="form-group col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-    <div class="form-check">
-    <input class="form-check-input" type="checkbox" id="gridCheck">
-    <label class="form-check-label" for="gridCheck">
-        Acepto términos y codiciones
-    </label>
+        <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+                Acepto términos y codiciones
+            </label>
+        </div>
+        </div>
+
+        <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
     </div>
 </div>
 
-<div class="form-group col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-    <button type="submit" class="btn btn-primary">Enviar</button>
-</div>
+<app-footer> </app-footer>
 
 
 

@@ -1,3 +1,18 @@
+/* Definimos estilos a los iconos de las redes sociales*/
+
+img#imgInstagram {
+    text-align: center;
+    border-style: none;
+    width: 20px;
+}
+
+img#imgWhatsApp {
+    text-align: center;
+    border-style: none;
+    width: 21px;
+    margin: 5px;
+}
+
 
 a.navbar-brand { /* definimos estilos al home denominado H&M */
     background: #feffff;

@@ -1,0 +1,205 @@
+
+/* es una fuente obtenida de google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Es la regla de la fuente obtenida, la seteamos en la etiqueta body*/
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+#footer { /* damos algunos estilos al footer */
+    background: #c6b379; /* Fondo */
+    font-size: 13px; /* Tamaño */
+    padding-top: 15px;
+    padding-bottom: 11px;
+}
+
+a.navbar-brand { /* definimos estilos al home denominado H&M */
+    background: #feffff;
+    width: 55px;
+    height: 35px;
+    padding: 4px;
+    text-align: center;
+    border-radius: 12px;
+    border: 4px;
+    border-bottom-style: inset;
+    font-weight: 700;
+}
+
+a.navbar-brand:hover { /* definimos estilos de animacion al home denominado H&M */
+    background: #c6b379;
+}
+
+button.btn.btn-outline-success.my-2.my-sm-0 { /* definimos estilos a los botones: enviar, suscribirme */
+    color: white;
+    border-color: aliceblue;
+    background: #996410;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+button.btn.btn-outline-success.my-2.my-sm-0:hover{ /* definimos hover a los botones: enviar, suscribirme */
+  background: yellow;
+  color: black;
+}
+
+/* definimos estilos al contenido del PREfooter en general */
+.footerSedes {
+    font-size: 13px;
+    font-weight: 700;
+    color: aliceblue;
+    background: #7d6917;
+    width: 52px;
+    height: 20px;
+    text-align: center;
+    border-radius: 9px;
+}
+
+.footerTelefonos {
+    font-size: 13px;
+    font-weight: 700;
+    color: aliceblue;
+    background: #7d6917;
+    width: 70px;
+    height: 24px;
+    text-align: center;
+    padding-top: 3px;
+    border-radius: 9px;
+}
+
+.footerHorarios {
+    font-size: 13px;
+    font-weight: 700;
+    color: aliceblue;
+    background: #7d6917;
+    width: 61px;
+    height: 21px;
+    text-align: center;
+    border-radius: 9px;
+}
+
+h6 {
+    font-size: 1rem;
+    color: mintcream;
+    font-weight: 700;
+    padding-top: 9px;
+    margin-bottom: 0.5rem;
+    line-height: 4px;
+}
+
+#LogoSite { /*estilos a la imagen principal*/
+    width: 14%;
+    margin-left: 500px;
+}
+
+button.btn.btn-primary {  /*estilos al boton "Enviar" del formulario*/
+    color: #fff;
+    background-color: #867048;
+    border-color: #1a1817;
+    font-weight: 600;
+    height: 24px;
+    width: 49px;
+    padding-left: 4px;
+    padding-top: 2px;
+    font-size: 12px;
+}
+
+/*definimos estilos al enlace para pedir citas*/
+
+#datosUsuario {  /*Definimos estilos al div con el contenido general del formulario*/
+    width: 77%;
+    padding-bottom: 30px;
+    background: beige;
+    margin-left: 11%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 20px;
+    font-size: 12px;
+    font-family: unset;
+    font-style: italic;
+}
+
+.form-group.col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12 { /*Definmos estilos a la descripcion antes del formulario de citas*/
+    margin: auto;
+    text-align: justify;
+    padding-top: 50px;
+    font-size: 16px;
+}
+
+.descripcionCitas { /*Definmos estilos a la clase descrpcioncitas antes del formulario de citas*/
+    width: 91%;
+    padding-left: 10%;
+    padding-right: 2%;
+}
+
+.h1, h1 { /*Definmos estilos especificos al h1 titular antes del formulario de citas (Se efectúa correcciones)*/
+    text-align: center;
+    background: darkkhaki;
+    color: ghostwhite;
+    margin: auto;
+    padding-bottom: 3px;
+    border-radius: 12px;
+    font-size: 24px;
+}
+
+p1 {  /*Definmos estilos especificos al p1 titular antes del formulario de citas*/
+    font-size: 18px;
+    font-style: italic;
+}
+
+
+.form-check { /*Definimos algunos estilos para los terminos y condiciones*/
+    position: relative;
+    display: block;
+    padding-left: 1.25rem;
+    width: 186px;
+    text-align: -webkit-match-parent;
+    font-size: 11px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+}
+
+.form-check:hover { /*Definimos animacion hover para los terminos y condiciones*/
+    background: rgb(61, 164, 238);
+    color: whitesmoke;
+}
+
+#gridCheck:hover { /*Definimos animacion hover para los el checkbox terminos y condiciones*/
+    background: rgb(61, 164, 238);
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+/* Footer, es un dato adicional que aprendí y deseo anexarlo como mi firma al pie del sitio */
+
+footer {
+    /* text-align:center; */
+    background-color: #d9d9da00;
+    color: #222121;
+    font-size: 12px;
+    margin: 3px;
+    width: 60%;
+    margin-left: 2%;
+    height: 13px;
+    padding-bottom: 8px;
+    font-style: oblique;
+}
+
+#HechoPor{
+    font-weight: 700;
+    text-align: center;
+    list-style: none;   
+    text-decoration: none;
+    color: #691919;
+    padding-bottom: 6px;
+}
+
+#HechoPor:hover{
+    background: rgb(255, 255, 16);
+    color: black;
+    -webkit-box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
+    -moz-box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
+    box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
+}
