@@ -9,6 +9,10 @@ import { CitasComponent } from './componentes/citas/citas.component';
 import { ContactenosComponent } from './componentes/contactenos/contactenos.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { TratamientosComponent } from './componentes/tratamientos/tratamientos.component';
+import { DashboardComponent } from './componentes/dashboard/dashboard.component';
+import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
+import { AdministrarCitasComponent } from './componentes/administrar-citas/administrar-citas.component';
+import { AdministrarTratamientosComponent } from './componentes/administrar-tratamientos/administrar-tratamientos.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent, pathMatch:"full"},
@@ -20,7 +24,11 @@ const routes: Routes = [
   {path:"login",component:LoginComponent, pathMatch:"full"},
   {path:"nosotros",component:NosotrosComponent, pathMatch:"full"},
   {path:"registro",component:RegistroComponent, pathMatch:"full"},
-  {path:"tratamientos",component:TratamientosComponent, pathMatch:"full"}
+  {path:"tratamientos",component:TratamientosComponent, pathMatch:"full"},
+  {path:"dashboard",component:DashboardComponent,pathMatch:"full"},
+  {path:"usuarios",component:UsuariosComponent,pathMatch:"full"},
+  {path:"administrar-citas",component:AdministrarCitasComponent,pathMatch:"full"},
+  {path:"administrar-tratamientos",component:AdministrarTratamientosComponent,pathMatch:"full"}
 ];
 
 @NgModule({
