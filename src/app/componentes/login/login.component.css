@@ -1,0 +1,23 @@
+#FormularioLogin {
+    padding-bottom: 10px;
+    padding-top: 44px;
+    border: solid 1px;
+    border-color: antiquewhite;
+    background: beige;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 14px;
+    width: 40%;
+}
+
+.form-control {
+    width: 45%;
+}
+
+.form-control[_ngcontent-ng-c3036511121] {
+    width: 97%;
+}
+
+button.btn.btn-danger {
+    margin: 9px;
+}

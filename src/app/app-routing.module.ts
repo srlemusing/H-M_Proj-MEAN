@@ -13,6 +13,7 @@ import { DashboardComponent } from './componentes/dashboard/dashboard.component'
 import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 import { AdministrarCitasComponent } from './componentes/administrar-citas/administrar-citas.component';
 import { AdministrarTratamientosComponent } from './componentes/administrar-tratamientos/administrar-tratamientos.component';
+import { PagarComponent } from './componentes/pagar/pagar.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent, pathMatch:"full"},
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path:"dashboard",component:DashboardComponent,pathMatch:"full"},
   {path:"usuarios",component:UsuariosComponent,pathMatch:"full"},
   {path:"administrar-citas",component:AdministrarCitasComponent,pathMatch:"full"},
-  {path:"administrar-tratamientos",component:AdministrarTratamientosComponent,pathMatch:"full"}
+  {path:"administrar-tratamientos",component:AdministrarTratamientosComponent,pathMatch:"full"},
+  {path:"pagar",component:PagarComponent, pathMatch:"full"}
 ];
 
 @NgModule({
