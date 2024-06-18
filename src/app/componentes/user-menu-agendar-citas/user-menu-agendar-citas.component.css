@@ -126,4 +126,7 @@ form {
     color: #333;
     margin-top: 10px;
 }
+::marker {
+  color: white;
+}
 
