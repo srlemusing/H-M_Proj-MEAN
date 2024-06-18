@@ -19,6 +19,8 @@ import { MicuentaComponent } from './componentes/micuenta/micuenta.component';
 import { AdministrarCitasComponent } from './componentes/administrar-citas/administrar-citas.component';
 import { AdministrarTratamientosComponent } from './componentes/administrar-tratamientos/administrar-tratamientos.component';
 import { PagarComponent } from './componentes/pagar/pagar.component';
+import { AdministrarUsuariosComponent } from './componentes/administrar-usuarios/administrar-usuarios.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,11 +40,14 @@ import { PagarComponent } from './componentes/pagar/pagar.component';
     MicuentaComponent,
     AdministrarCitasComponent,
     AdministrarTratamientosComponent,
-    PagarComponent
+    PagarComponent,
+    AdministrarUsuariosComponent,
   ],
+
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

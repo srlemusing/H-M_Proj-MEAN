@@ -52,3 +52,8 @@ div#datosusuario img {
 .itemmenu:hover {
     margin-left: 10px;
 }
+
+div#superior {
+    background: #d67de5;
+    height: 39px;
+}
