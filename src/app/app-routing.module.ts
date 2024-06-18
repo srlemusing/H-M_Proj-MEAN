@@ -14,6 +14,7 @@ import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 import { AdministrarCitasComponent } from './componentes/administrar-citas/administrar-citas.component';
 import { AdministrarTratamientosComponent } from './componentes/administrar-tratamientos/administrar-tratamientos.component';
 import { PagarComponent } from './componentes/pagar/pagar.component';
+import { AdministrarUsuariosComponent } from './componentes/administrar-usuarios/administrar-usuarios.component';
 import { UserMenuComponent } from './componentes/user-menu/user-menu.component';
 import { UserMenuAgendarCitasComponent } from './componentes/user-menu-agendar-citas/user-menu-agendar-citas.component';
 import { UserMenuMisCitasComponent } from './componentes/user-menu-mis-citas/user-menu-mis-citas.component';
@@ -38,7 +39,9 @@ const routes: Routes = [
   {path:"user-menu",component:UserMenuComponent,pathMatch:"full"},
   {path:"user-menu-agendar-citas",component:UserMenuAgendarCitasComponent,pathMatch:"full"},
   {path:"user-menu-mis-citas",component:UserMenuMisCitasComponent,pathMatch:"full"},
-  {path:"user-menu-mis-datos",component:UserMenuMisDatosComponent,pathMatch:"full"}
+  {path:"user-menu-mis-datos",component:UserMenuMisDatosComponent,pathMatch:"full"},
+  {path:"administrar-usuarios",component:AdministrarUsuariosComponent,pathMatch:"full"},
+  {path:"user-menu",component:UserMenuComponent,pathMatch:"full"}
 ];
 
 @NgModule({
