@@ -156,9 +156,6 @@ form {
 ::marker {
   color: white;
 }
-btn-primary {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-  margin-left: 3px;
+button.btn.btn-primary {
+  margin-left: 5px;
 }
