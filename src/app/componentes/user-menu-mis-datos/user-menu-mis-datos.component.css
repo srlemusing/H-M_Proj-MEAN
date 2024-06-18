@@ -127,3 +127,36 @@ form {
     margin-top: 10px;
 }
 
+
+
+
+.form-group.col-md-6 {
+  margin-bottom: -10px;
+}
+div#Datos-T-Cliente {
+  background: #ffffff;
+  color: black;
+  border-radius: 12px;
+  height: 500px;
+  width: 90%;
+  margin-top: 10px;
+  padding: 15px;
+  box-shadow: 11px 6px 20px rgb(0 0 0 / 37%);
+}
+div#Mis-Datos-C {
+  margin-left: 4%;
+  margin-top: 2%;
+}
+.Text-Datos {
+  color: black;
+  text-align: center;
+  font-size: 30px;
+  color: #007bff;
+}
+form {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  color: #333;
+  margin-top: 10px;
+}

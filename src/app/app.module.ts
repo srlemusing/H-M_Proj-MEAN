@@ -20,6 +20,9 @@ import { AdministrarCitasComponent } from './componentes/administrar-citas/admin
 import { AdministrarTratamientosComponent } from './componentes/administrar-tratamientos/administrar-tratamientos.component';
 import { PagarComponent } from './componentes/pagar/pagar.component';
 import { UserMenuComponent } from './componentes/user-menu/user-menu.component';
+import { UserMenuMisDatosComponent } from './componentes/user-menu-mis-datos/user-menu-mis-datos.component';
+import { UserMenuMisCitasComponent } from './componentes/user-menu-mis-citas/user-menu-mis-citas.component';
+import { UserMenuAgendarCitasComponent } from './componentes/user-menu-agendar-citas/user-menu-agendar-citas.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { UserMenuComponent } from './componentes/user-menu/user-menu.component';
     AdministrarCitasComponent,
     AdministrarTratamientosComponent,
     PagarComponent,
-    UserMenuComponent
+    UserMenuComponent,
+    UserMenuMisDatosComponent,
+    UserMenuMisCitasComponent,
+    UserMenuAgendarCitasComponent
   ],
   imports: [
     BrowserModule,

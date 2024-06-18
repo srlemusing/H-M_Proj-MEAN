@@ -1,0 +1,83 @@
+<div class="container-fluid">
+  <div class="row">
+      <div id="Menu-Cliente" class="col-lg-3 col-md-4 col-sm-12">
+          <div id="Datos-Cliente">
+              <img src="../../../assets/images/Avatar.png" alt="">
+              <div class="Nombre-Cliente">Steban Delgado</div>
+              <div class="Rol-Cliente">Administrador</div>
+          </div>
+          <div class="Opciones-Cliente">
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost4200/user-menu-mis-datos"><div class="Item-Menu">Mis Datos</div></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost4200/user-menu-mis-citas"><div class="Item-Menu">Mis Citas</div></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost4200/user-menu-agendar-citas"><div class="Item-Menu">Agendar Cita</div></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost4200"><div class="Item-Menu">Salir</div></a>
+              </li>
+        </div>
+      </div>
+
+      <div id="Mis-Datos-C" class="col-lg-4 col-md-4 col-sm-12">
+          <div class="Text-Datos">Agendar Cita</div>
+          <form id="Mis-Datos-C">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputNombre">Nombre:</label>
+                <input type="text" class="form-control" id="inputNombre" placeholder="Nombre">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputApellido">Apellido:</label>
+                <input type="text" class="form-control" id="inputApellido" placeholder="Apellido">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputCedula">Cedula:</label>
+                <input type="text" class="form-control" id="inputCedula" placeholder="12345678912">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputEmail">Correo:</label>
+                <input type="text" class="form-control" id="inputEmail" placeholder="ejemplo@gmail.com">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputTelefono">Telefono:</label>
+                <input type="text" class="form-control" id="inputTelefono" placeholder="3141234565">
+              </div>
+              <div class="form-group col-md-6">
+                  <label for="inputProcedimiento">Procedimiento:</label>
+                  <select id="inputProcedimiento" class="form-control">
+                      <option selected>Seleccionar...</option>
+                      <option>Valoración</option>
+                      <option>Blanqueamiento</option>
+                      <option>Diseño de sonrisa</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputFecha">Fecha:</label>
+                <input type="date" class="form-control" id="inputFecha">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputHora">Hora:</label>
+                <input type="time" class="form-control" id="inputHora">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="inputCiudad">Ciudad</label>
+                <select id="inputCiudad" class="form-control">
+                  <option selected>Seleccionar...</option>
+                  <option>Medellin</option>
+                  <option>Quibdó</option>
+                </select>
+              </div>
+            </div>
+            <button type="button" id="confirmarCita" class="btn btn-primary">Confirmar Cita</button>
+          </form>
+        </div>
+  </div>
+</div>

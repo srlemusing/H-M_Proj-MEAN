@@ -1,0 +1,73 @@
+<div class="container-fluid">
+  <div class="row">
+      <div id="Menu-Cliente" class="col-lg-3 col-md-4 col-sm-12">
+          <div id="Datos-Cliente">
+              <img src="../../../assets/images/Avatar.png" alt="">
+              <div class="Nombre-Cliente">Steban Delgado</div>
+              <div class="Rol-Cliente">Administrador</div>
+          </div>
+          <div class="Opciones-Cliente">
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost4200/user-menu-mis-datos"><div class="Item-Menu">Mis Datos</div></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost4200/user-menu-mis-citas"><div class="Item-Menu">Mis Citas</div></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost4200/user-menu-agendar-citas"><div class="Item-Menu">Agendar Cita</div></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost4200"><div class="Item-Menu">Salir</div></a>
+              </li>
+        </div>
+      </div>
+      <div id="Mis-Datos-C" class="col-lg-4 col-md-4 col-sm-12">
+        <div class="Text-Datos">Mis Datos</div>
+        <form id="Mis-Datos-C">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputNombre">Nombre:</label>
+              <input type="text" class="form-control" placeholder="Nombre">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputApellido">Apellido:</label>
+              <input type="text" class="form-control" placeholder="Apellido">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputCedula">Cedula:</label>
+              <input type="text" class="form-control" placeholder="12345678912">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Correo:</label>
+              <input type="text" class="form-control" placeholder="ejemplo@gmail.com">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Telefono:</label>
+              <input type="text" class="form-control" placeholder="3141234565">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputAddress">Dirección:</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="Calle 3 Carrera 3 Casa 3">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputCity">Ciudad</label>
+              <input type="text" class="form-control" id="inputCity" placeholder="Monteria">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputState">Departamento</label>
+              <select id="inputState" class="form-control">
+                <option selected>Seleccionar...</option>
+                <option>Antioquia</option>
+                <option>Chocó</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success">Guardar</button>
+          <button type="submit" class="btn btn-primary">Actualizar</button>
+        </form>
+      </div>
+  </div>
+</div>
+
