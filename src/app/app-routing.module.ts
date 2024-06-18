@@ -15,6 +15,7 @@ import { AdministrarCitasComponent } from './componentes/administrar-citas/admin
 import { AdministrarTratamientosComponent } from './componentes/administrar-tratamientos/administrar-tratamientos.component';
 import { PagarComponent } from './componentes/pagar/pagar.component';
 import { AdministrarUsuariosComponent } from './componentes/administrar-usuarios/administrar-usuarios.component';
+import { UserMenuComponent } from './componentes/user-menu/user-menu.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent, pathMatch:"full"},
@@ -33,6 +34,7 @@ const routes: Routes = [
   {path:"administrar-tratamientos",component:AdministrarTratamientosComponent,pathMatch:"full"},
   {path:"pagar",component:PagarComponent, pathMatch:"full"},
   {path:"administrar-usuarios",component:AdministrarUsuariosComponent,pathMatch:"full"},
+  {path:"user-menu",component:UserMenuComponent,pathMatch:"full"}
 ];
 
 @NgModule({

@@ -21,6 +21,7 @@ import { AdministrarTratamientosComponent } from './componentes/administrar-trat
 import { PagarComponent } from './componentes/pagar/pagar.component';
 import { AdministrarUsuariosComponent } from './componentes/administrar-usuarios/administrar-usuarios.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserMenuComponent } from './componentes/user-menu/user-menu.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { HttpClientModule } from '@angular/common/http';
     AdministrarTratamientosComponent,
     PagarComponent,
     AdministrarUsuariosComponent,
+    UserMenuComponent
   ],
 
   imports: [
