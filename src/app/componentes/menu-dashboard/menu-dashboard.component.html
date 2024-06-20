@@ -1,7 +1,6 @@
-<div class="container-fluid">
-    <div class="row">
-        <div id="Menu-Cliente" class="col-lg-3 col-md-4 col-sm-12">
-            <div id="Datos-Cliente">
+    <!-- <div class="row">
+        <div id="Mi-Menu" class="col-lg-3 col-md-4 col-sm-12">
+            <div id="Datos-Usuario">
                 <img src="assets/images/AvatarAdmin.png">
                     <div *ngIf="rol=='1'"><img src="assets/images/AvatarAdmin.png"></div>
                     <div *ngIf="rol=='2'"><img src="assets/images/AvatarUsuario.png"></div>
@@ -14,16 +13,42 @@
                 </div>
             </div>
             <div class="Opciones-Cliente">
-                    <a class="nav-link"><div class="Item-Menu" routerLink="/dashboard">Dashboard</div></a>
-                    <a class="nav-link"><div class="Item-Menu" routerLink="/administrar-usuarios"> Administrar Usuarios</div></a>
-                    <a class="nav-link"><div class="Item-Menu" routerLink="/citas"> Administrar Citas</div></a>
-                    <a class="nav-link"><div class="Item-Menu" routerLink="/administrar-tratamientos">Administrar Tratamientos</div></a>
-                    <a class="nav-link"><div class="Item-Menu" routerLink="/administrar-clientes">Administrar Clientes</div></a>
-                    <a class="nav-link"><div class="Item-Menu" routerLink="/citas"> Agendar Citas</div></a>
-                    <a class="nav-link"><div class="Item-Menu" routerLink="/miscitas">Mis Citas</div></a>
-                    <a class="nav-link"><div class="Item-Menu" routerLink="/micuenta">Mi Cuenta</div></a>
-                    <a class="nav-link"><div class="Item-Menu" routerLink="/login">Salir</div></a>
+                    <div class="Item-Menu" routerLink="/dashboard">Dashboard</div>
+                    <div class="Item-Menu" routerLink="/administrar-usuarios"> Administrar Usuarios</div>
+                    <div class="Item-Menu" routerLink="/citas"> Administrar Citas</div>
+                    <div class="Item-Menu" routerLink="/administrar-tratamientos">Administrar Tratamientos</div>
+                    <div class="Item-Menu" routerLink="/administrar-clientes">Administrar Clientes</div>
+                    <div class="Item-Menu" routerLink="/citas"> Agendar Citas</div>
+                    <div class="Item-Menu" routerLink="/miscitas">Mis Citas</div>
+                    <div class="Item-Menu" routerLink="/micuenta">Mi Cuenta</div>
+                    <div class="Item-Menu" routerLink="/login">Salir</div>
             </div>
         </div>
-    </div>
-  </div>
+    </div> -->
+
+    <div id="Mi-Menu">
+        <div id="Datos-Usuario">
+            <img src="assets/images/AvatarAdmin.png">
+            <div *ngIf="rol=='1'"><img src="assets/images/AvatarAdmin.png"></div>
+            <div *ngIf="rol=='2'"><img src="assets/images/AvatarUsuario.png"></div>
+            <div *ngIf="rol=='3'"><img src="assets/images/Avatar.png"></div>
+          <div class="lblnombre">Cristhian Beltran</div>
+          <div class="Rol-Cliente">Super Administrador
+            <div *ngIf="rol=='1'">Super Administrador</div>
+            <div *ngIf="rol=='2'">Usuario</div>
+            <div *ngIf="rol=='3'">Cliente</div>
+        </div>
+        </div>
+        <div class="opsiones">
+            <div class="Item-Menu" routerLink="/dashboard">Dashboard</div>
+            <div class="Item-Menu" routerLink="/administrar-usuarios"> Administrar Usuarios</div>
+            <div class="Item-Menu" routerLink="/administrar-citas"> Administrar Citas</div>
+            <div class="Item-Menu" routerLink="/administrar-tratamientos">Administrar Tratamientos</div>
+            <div class="Item-Menu" routerLink="/administrar-clientes">Administrar Clientes</div>
+            <div class="Item-Menu" routerLink="/citas"> Agendar Citas</div>
+            <div class="Item-Menu" routerLink="/user-menu-mis-citas">Mis Citas</div>
+            <div class="Item-Menu" routerLink="/user-menu-mis-datos">Mi Cuenta</div>
+            <div class="Item-Menu" routerLink="/login">Salir</div>
+        </div>
+      </div>
+      <div id="Superior"></div>    

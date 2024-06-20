@@ -171,3 +171,41 @@ footer {
     -moz-box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
     box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
 }
+.ventana {
+    width: calc(100% - 210px);
+    position: absolute;
+    margin-left: 210px;
+    border: solid 2px #00BCD4;
+    height: calc(100% - 35px);
+    overflow-x: auto;
+}
+.titulo {
+    background: #ffc200;
+    color: white;
+    height: 25px;
+    border-radius: 13px;
+    padding-left: 8px;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 3px;
+    margin-bottom: 40px;
+}
+.btnadd {
+    background: #8BC34A;
+    width: 39px;
+    text-align: center;
+    color: white;
+    border-radius: 50%;
+    font-size: 23px;
+    font-weight: 700;
+    margin: 4px;
+    right: 4px;
+    position: absolute;
+    top: 25px;
+    cursor: pointer;
+}
+.table {
+    width: 1152px;
+    margin-bottom: 1rem;
+    color: #212529;
+}

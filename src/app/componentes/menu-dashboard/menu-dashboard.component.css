@@ -1,5 +1,5 @@
-#Menu-Cliente {
-    background: #ffffff;
+/* #Menu-Cliente {
+    background: #dfad08;
     border-radius: 12px;
     padding: 20px;
     box-shadow: -5px 1px 16px rgb(0 0 0 / 37%);
@@ -10,8 +10,8 @@
   }
   body {
       font-family: 'Roboto', sans-serif;
-      background-color: #ffffff;
-      color: #fff;
+      background-color: #d69213;
+      color: #e4bc09;
   }
   #Datos-Cliente img {
       width: 50%;
@@ -44,14 +44,14 @@
       color: #007bff;
   }
   #Menu-Superior {
-      background: #ffffff;
+      background: #c7ba09;
       height: 60px;
       border-radius: 12px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   form {
-      background: #ffffff;
+      background: #dacc0d;
       border-radius: 15px;
       padding: 20px;
       color: #333;
@@ -84,7 +84,7 @@
       margin-bottom: -10px;
   }
   div#Datos-T-Cliente {
-      background: #ffffff;
+      background: #e09d0b;
       color: black;
       border-radius: 12px;
       height: 498px;
@@ -100,7 +100,7 @@
       margin-bottom: -10px;
   }
   div#Datos-T-Cliente {
-      background: #ffffff;
+      background: #d6b10d;
       color: black;
       border-radius: 12px;
       height: 500px;
@@ -120,13 +120,66 @@
       color: #007bff;
   }
   form {
-      background: #ffffff;
+      background: #e0d206;
       border-radius: 15px;
       padding: 20px;
       color: #333;
       margin-top: 10px;
   }
   ::marker {
+    color: rgb(221, 132, 15);
+  }
+   */
+
+   div#Mi-Menu {
+    border: solid 0px gray;
+    width: 210px;
+    height: 100vh;
+    background-color: #996410;
+    float: left;
+  
+  }
+  div#Datos-Usuario img {
+    width: 80%;
+    border-radius: 12px;
+    border: solid 0px;
+    margin-left: calc(50% - 85px);
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .lblnombre {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
     color: white;
+  }
+  .lblrol {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: white;
+  }
+  .itemmenu {
+    margin-bottom: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.2s ease-in-out;
+    color: white;
+  }
+  .Item-Menu:hover{
+    margin-left: 10px;
+    color: #007bff;
+  }
+  .opsiones {
+    padding-left: 10px;
+  }
+  div#Superior {
+    background: #996410;
+    height: 35px;
+    width: 100%;
+  
   }
   
