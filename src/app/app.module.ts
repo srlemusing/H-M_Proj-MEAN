@@ -25,6 +25,7 @@ import { UserMenuComponent } from './componentes/user-menu/user-menu.component';
 import { UserMenuMisDatosComponent } from './componentes/user-menu-mis-datos/user-menu-mis-datos.component';
 import { UserMenuMisCitasComponent } from './componentes/user-menu-mis-citas/user-menu-mis-citas.component';
 import { UserMenuAgendarCitasComponent } from './componentes/user-menu-agendar-citas/user-menu-agendar-citas.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { UserMenuAgendarCitasComponent } from './componentes/user-menu-agendar-c
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

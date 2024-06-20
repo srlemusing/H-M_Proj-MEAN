@@ -10,23 +10,41 @@
             <thead class="thead-dark">
               <tr>
 
-                <th scope="col">Código</th>
-                <th scope="col">Categoria</th>
+                <th scope="col">Usuario</th>
+                <th scope="col">Clave</th>
                 <th scope="col">Nombre</th>
-                <th scope="col">Precio</th>
-                <th scope="col">Estado</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Cédula</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Codigo de Activación</th>
+                <th scope="col">Rol</th>
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let item of datos" (click)="EditarId(item._id)" [ngStyle]="{'background': item.color}">
 
-                <td>{{item.cod_cat}}</td>
+                <td>{{item.usuario}}</td>
+                <td>{{item.clave}}</td>
                 <td>{{item.nombre}}</td>
+                <td>{{item.apellidos}}</td>
+                <td>{{item.cedula}}</td>
+                <td>{{item.correo}}</td>
+                <td>{{item.telefono}}</td>
+                <td>{{item.codigoact}}</td>
+                <td>{{item.rol}}</td>
 
                 <td>
                   <div *ngIf="item.estado==1">Activo</div>
                   <div *ngIf="item.estado==0">Inactivo</div>
                 </td>
+
+                <td>
+                  <div *ngIf="item.rol==1">Super Administrador</div>
+                  <div *ngIf="item.rol==2">Usuario</div>
+                  <div *ngIf="item.rol==3">Cliente</div>
+                </td>
+
               </tr>
 
             </tbody>
@@ -47,32 +65,55 @@
         <div class="modal-body">
 
           <div class="form-group">
-            <label for="codigocat">Categoria</label>
-            <!-- <select class="form-control" id="codigocat" [(ngModel)]="cod_cat"> -->
-              
-              <ng-container *ngFor="let item of datosusuarios">
-                <!-- <option value="">Seleccionar</option> -->
-                <option value="{{item.cod_cat}}" *ngIf="item.estado =='1'">{{item.nombre}}</option>
-              </ng-container>
-            <!-- </select> -->
+            <label for="rol">Rol</label>
+            <select class="form-control" id="rol" [(ngModel)]="rol">
+                <option value="1">Super Administrador</option>
+                <option value="2">Usuario</option>
+                <option value="3">Cliente</option>
+            </select>
           </div> 
 
             <div class="form-group">
-                <label for="nombre">Nombre Productos</label>
-                <!-- <input type="email" class="form-control" id="nombre" [(ngModel)]="nombre"> -->
+              <label for="usuario">Usuario</label>
+              <input type="email" class="form-control" id="usuario" [(ngModel)]="usuario">
+            </div>          
+
+            <div class="form-group">
+              <label for="clave">Clave</label>
+              <input type="email" class="form-control" id="clave" [(ngModel)]="clave">
             </div>
 
             <div class="form-group">
-              <label for="color">Color</label>
-              <!-- <input type="color" class="form-control" id="color" [(ngModel)]="color" placeholder="#ebebeb"> -->
+                <label for="nombre">Nombre</label>
+                <input type="email" class="form-control" id="nombre" [(ngModel)]="nombre">
+            </div>
+
+            <div class="form-group">
+              <label for="apellidos">Apellidos</label>
+              <input type="email" class="form-control" id="apellidos" [(ngModel)]="apellidos">
+            </div>
+
+            <div class="form-group">
+              <label for="cedula">Cedula</label>
+              <input type="email" class="form-control" id="cedula" [(ngModel)]="cedula">
+            </div>
+
+            <div class="form-group">
+              <label for="telefono">Telefono</label>
+              <input type="telefono" class="form-control" id="telefono" [(ngModel)]="telefono">
+            </div>
+
+            <div class="form-group">
+              <label for="codigoact">Codigo de Activación</label>
+              <input type="codigoact" class="form-control" id="codigoact" [(ngModel)]="codigoact">
             </div>
 
             <div class="form-group">
                 <label for="estado">Estado</label>
-                <!-- <select class="form-control" id="estado" [(ngModel)]="estado"> -->
+                <select class="form-control" id="estado" [(ngModel)]="estado">
                   <option value="0">Inactivo</option>
                   <option value="1">Activo</option>
-                <!-- </select> -->
+                </select>
               </div>
 
 
