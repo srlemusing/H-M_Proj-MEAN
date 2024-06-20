@@ -1,131 +1,52 @@
-#Menu-Cliente {
-  background: #ffffff;
+div#Mi-Menu {
+  border: solid 0px gray;
+  width: 210px;
+  height: 100vh;
+  background-color: #996410;
+  float: left;
+
+}
+
+div#Datos-Usuario img {
+  width: 80%;
   border-radius: 12px;
-  padding: 20px;
-  box-shadow: -5px 1px 16px rgb(0 0 0 / 37%);
-  margin-left: 2px;
-  margin-right: -5px;
-  margin-top: 2px;
-  height: 99vh;
+  border: solid 0px;
+  margin-left: calc(50% - 85px);
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #ffffff;
-    color: #fff;
-}
-#Datos-Cliente img {
-    width: 50%;
-    margin-left: 25%;
-    cursor: pointer;
-    border-radius: 50%;
-}
-.Nombre-Cliente {
-    text-align: center;
-    font-size: 20px;
-    margin-top: 10px;
-    color: #333;
-
-}
-.Rol-Cliente {
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 20%;
-    color: #666;
-}
-.Item-Menu {
-    margin-bottom: 5px;
-    font-style: normal;
-    color: #333;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-.Item-Menu:hover{
-    margin-left: 10px;
-    color: #007bff;
-}
-#Menu-Superior {
-    background: #ffffff;
-    height: 60px;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-form {
-    background: #ffffff;
-    border-radius: 15px;
-    padding: 20px;
-    color: #333;
-    margin-top: 20px;
-}
-
-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-form input[type="text"],
-form input[type="date"],
-form input[type="time"],
-form select {
-    margin-bottom: 20px;
-}
-
-form input[type="submit"] {
-    transition: background 0.3s ease;
-}
-
-form input[type="submit"]:hover {
-    background: #0056b3;
-}
-li.nav-item {
-    margin-top: -30px;
-}
-.form-group.col-md-6 {
-    margin-bottom: -10px;
-}
-div#Datos-T-Cliente {
-    background: #ffffff;
-    color: black;
-    border-radius: 12px;
-    height: 498px;
-    width: 90%;
-    margin-top: 20px;
-    padding: 15px;
-}
-div#Mis-Datos-C {
-    margin-left: 10%;
-    margin-top: 2%;
-}
-.form-group.col-md-6 {
-    margin-bottom: -10px;
-}
-div#Datos-T-Cliente {
-    background: #ffffff;
-    color: black;
-    border-radius: 12px;
-    height: 500px;
-    width: 90%;
-    margin-top: 20px;
-    padding: 15px;
-    box-shadow: 11px 6px 20px rgb(0 0 0 / 37%);
-}
-div#Mis-Datos-C {
-    margin-left: 4%;
-    margin-top: 2%;
-}
-.Text-Datos {
-    color: black;
-    text-align: center;
-    font-size: 30px;
-    color: #007bff;
-}
-form {
-    background: #ffffff;
-    border-radius: 15px;
-    padding: 20px;
-    color: #333;
-    margin-top: 10px;
-}
-::marker {
+.lblnombre {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
   color: white;
+}
+.lblrol {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: white;
+}
+.itemmenu {
+  margin-bottom: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.2s ease-in-out;
+  color: white;
+}
+.itemmenu:hover{
+  margin-left: 10px;
+  color: rgb(180, 180, 180);
+}
+.opsiones {
+  padding-left: 10px;
+}
+div#Superior {
+  background: #996410;
+  height: 35px;
+  width: 100%;
+
 }
