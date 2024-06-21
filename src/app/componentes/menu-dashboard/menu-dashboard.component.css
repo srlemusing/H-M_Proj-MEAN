@@ -1,143 +1,13 @@
-/* #Menu-Cliente {
-    background: #dfad08;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: -5px 1px 16px rgb(0 0 0 / 37%);
-    margin-left: 2px;
-    margin-right: -5px;
-    margin-top: 2px;
-    height: 100%;
-  }
-  body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #d69213;
-      color: #e4bc09;
-  }
-  #Datos-Cliente img {
-      width: 50%;
-      margin-left: 25%;
-      cursor: pointer;
-      border-radius: 50%;
-  }
-  .Nombre-Cliente {
-      text-align: center;
-      font-size: 20px;
-      margin-top: 10px;
-      color: #333;
-  
-  }
-  .Rol-Cliente {
-      text-align: center;
-      font-size: 20px;
-      margin-bottom: 20%;
-      color: #666;
-  }
-  .Item-Menu {
-      margin-bottom: 5px;
-      font-style: normal;
-      color: #333;
-      cursor: pointer;
-      transition: 0.3s ease-in-out;
-  }
-  .Item-Menu:hover{
-      margin-left: 10px;
-      color: #007bff;
-  }
-  #Menu-Superior {
-      background: #c7ba09;
-      height: 60px;
-      border-radius: 12px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  form {
-      background: #dacc0d;
-      border-radius: 15px;
-      padding: 20px;
-      color: #333;
-      margin-top: 20px;
-  }
-  
-  form label {
-      display: block;
-      margin-bottom: 5px;
-  }
-  
-  form input[type="text"],
-  form input[type="date"],
-  form input[type="time"],
-  form select {
-      margin-bottom: 20px;
-  }
-  
-  form input[type="submit"] {
-      transition: background 0.3s ease;
-  }
-  
-  form input[type="submit"]:hover {
-      background: #0056b3;
-  }
-  li.nav-item {
-      margin-top: -30px;
-  }
-  .form-group.col-md-6 {
-      margin-bottom: -10px;
-  }
-  div#Datos-T-Cliente {
-      background: #e09d0b;
-      color: black;
-      border-radius: 12px;
-      height: 498px;
-      width: 90%;
-      margin-top: 20px;
-      padding: 15px;
-  }
-  div#Mis-Datos-C {
-      margin-left: 10%;
-      margin-top: 2%;
-  }
-  .form-group.col-md-6 {
-      margin-bottom: -10px;
-  }
-  div#Datos-T-Cliente {
-      background: #d6b10d;
-      color: black;
-      border-radius: 12px;
-      height: 500px;
-      width: 90%;
-      margin-top: 20px;
-      padding: 15px;
-      box-shadow: 11px 6px 20px rgb(0 0 0 / 37%);
-  }
-  div#Mis-Datos-C {
-      margin-left: 4%;
-      margin-top: 2%;
-  }
-  .Text-Datos {
-      color: black;
-      text-align: center;
-      font-size: 30px;
-      color: #007bff;
-  }
-  form {
-      background: #e0d206;
-      border-radius: 15px;
-      padding: 20px;
-      color: #333;
-      margin-top: 10px;
-  }
-  ::marker {
-    color: rgb(221, 132, 15);
-  }
-   */
-
-   div#Mi-Menu {
-    border: solid 0px gray;
+  div#Mi-Menu {
+    border: solid 0px ;
     width: 210px;
-    height: 100vh;
-    background-color: #996410;
+    height: 99vh;
+    margin-top: 2px;
+    border-radius: 12px;
+    background-color: f0f0f0;
     float: left;
-  
+    box-shadow: -4px 11px 15px rgb(0 0 0 / 37%);
+
   }
   div#Datos-Usuario img {
     width: 80%;
@@ -152,7 +22,7 @@
     text-align: center;
     font-size: 18px;
     font-weight: 500;
-    color: white;
+    color: rgb(0, 0, 0);
   }
   .lblrol {
     width: 100%;
@@ -160,26 +30,27 @@
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 30px;
-    color: white;
+    color: rgb(0, 0, 0);
   }
   .itemmenu {
     margin-bottom: 5px;
     cursor: pointer;
     width: 100%;
+    font-size: 14px;
+    padding: 1px;
+    margin-left: 5px;
     transition: 0.2s ease-in-out;
-    color: white;
+    color: rgb(0, 0, 0);
   }
-  .Item-Menu:hover{
+  .itemmenu:hover{
     margin-left: 10px;
-    color: #007bff;
+    color: rgb(180, 180, 180);
   }
-  .opsiones {
+  .opciones {
     padding-left: 10px;
   }
-  div#Superior {
-    background: #996410;
-    height: 35px;
-    width: 100%;
-  
-  }
-  
+  .ventana {
+    border: solid 0px ;
+}
+
+
