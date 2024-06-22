@@ -42,7 +42,7 @@ export class AdministrarUsuariosComponent implements OnInit{
       }
     }
   
-    this.peticion.Post(post.Host+post.path, post.payload).then(
+    this.peticion.Get(post.Host+post.path).then(
       (res:any) => {
         console.log(res)
         this.datosusuarios=res.data
@@ -53,7 +53,7 @@ export class AdministrarUsuariosComponent implements OnInit{
   }
 
   AbrirModal(){
-    this.usuario = this.datosusuarios[0]
+    this.usuario = this.datosusuarios[2].usuario
     this.clave = ""
     this.nombre = ""
     this.apellidos = ""
@@ -128,7 +128,7 @@ export class AdministrarUsuariosComponent implements OnInit{
       }
     }
   
-    this.peticion.Post(post.Host+post.path, post.payload).then(
+    this.peticion.Get(post.Host+post.path).then(
       (res:any) => {
         console.log(res)
         this.usuario=res.data[0].usuario
@@ -154,7 +154,7 @@ export class AdministrarUsuariosComponent implements OnInit{
       }
     }
   
-    this.peticion.Post(post.Host+post.path, post.payload).then(
+    this.peticion.Delete(post.Host+post.path, post.payload).then(
       (res:any) => {
         console.log(res)
         if(res.state==true){
@@ -198,7 +198,7 @@ export class AdministrarUsuariosComponent implements OnInit{
     }
   
 
-    this.peticion.Post(post.Host+post.path, post.payload).then(
+    this.peticion.Put(post.Host+post.path, post.payload).then(
       (res:any) => {
         console.log(res)
         if(res.state==true){
