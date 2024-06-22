@@ -30,3 +30,19 @@ a.navbar-brand:hover { /* definimos estilos de animacion al home denominado H&M 
     background: #e7dec4;
     border-radius: 8px;
 }
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    color: darkgrey;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.nav-link:hover{
+    background: #e7dec4;
+    border-radius: 4px;
+    -webkit-box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
+    -moz-box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
+    box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
+}
