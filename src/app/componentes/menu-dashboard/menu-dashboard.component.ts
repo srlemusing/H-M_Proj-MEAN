@@ -17,9 +17,9 @@ export class MenuDashboardComponent implements OnInit{
   ngOnInit(): void {
     this.cargarestado()
   }
-    
-  nombre:String = ""
-  rol:String = ""
+
+  nombre:String = "Cargando..."
+  rol:String = "Cargando..."
 
   cargarestado(){
     var post={
@@ -32,7 +32,7 @@ export class MenuDashboardComponent implements OnInit{
     this.peticion.Post(post.Host+post.path,post.payload).then((res:any)=>{
       console.log(res)
       if(res.nombre==""||res.nombre==undefined){
-        // this.router.navigate(["/login"])
+        //this.router.navigate(["/login"])
       }
       this.nombre=res.nombre
       this.rol=res.rol
@@ -50,7 +50,7 @@ export class MenuDashboardComponent implements OnInit{
     this.peticion.Post(post.Host+post.path,post.payload).then((res:any)=>{
       console.log(res)
       Swal.fire({
-        title:"Bien hecho!",
+        title:"Nos vemos pronto!",
         text:res.mensaje,
         icon:"success"
       });
