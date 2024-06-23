@@ -20,7 +20,7 @@ import { AdministrarCitasComponent } from './componentes/administrar-citas/admin
 import { AdministrarTratamientosComponent } from './componentes/administrar-tratamientos/administrar-tratamientos.component';
 import { PagarComponent } from './componentes/pagar/pagar.component';
 import { AdministrarUsuariosComponent } from './componentes/administrar-usuarios/administrar-usuarios.component';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { UserMenuComponent } from './componentes/user-menu/user-menu.component';
 import { UserMenuMisDatosComponent } from './componentes/user-menu-mis-datos/user-menu-mis-datos.component';
 import { UserMenuMisCitasComponent } from './componentes/user-menu-mis-citas/user-menu-mis-citas.component';
