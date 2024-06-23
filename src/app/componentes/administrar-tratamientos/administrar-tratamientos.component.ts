@@ -19,7 +19,7 @@ export class AdministrarTratamientosComponent implements OnInit{
     constructor(private peticion:PeticionService){}
     codigo:String = ""
     nombre:String = ""
-    // estado:Number = 1
+    _id:String = ""
     descripcion:String = ""
     precio:Number = 0
     datos:any[]=[]
@@ -119,6 +119,7 @@ export class AdministrarTratamientosComponent implements OnInit{
         this.nombre=res.data[0].nombre
         this.descripcion=res.data[0].descripcion
         this.precio=res.data[0].precio
+        this._id=res.data[0]._id
         // this.estado=res.data[0].estado
         $('#modalnuevo').modal('show')
       }
