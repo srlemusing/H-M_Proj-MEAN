@@ -8,16 +8,18 @@ form.login {
 }
 button.btnLogin {
   border: 0px;
-  background: #996410;
+  background: #977744;
   color: white;
   padding: 4px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   transition: 0.3s ease-in-out;
 }
 button.btnLogin:hover{
-  background: #724b0c
+  background: #efefed;
+  color: rgb(136, 101, 14);
+  font-size: 12px;
 }
 h2.logintext {
   margin-top: 20px;

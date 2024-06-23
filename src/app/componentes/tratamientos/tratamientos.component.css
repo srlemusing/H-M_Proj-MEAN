@@ -1,128 +1,73 @@
-
-/* es una fuente obtenida de google fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/*Es la regla de la fuente obtenida, la seteamos en la etiqueta body*/
-body{
-    font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
 }
-
-#footer { /* damos algunos estilos al footer */
-    background: #c6b379; /* Fondo */
-    font-size: 13px; /* Tamaño */
-    padding-top: 15px;
-    padding-bottom: 11px;
+.contenedor-acordeon{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-
-a.navbar-brand { /* definimos estilos al home denominado H&M */
-    background: #c6b379;
-    width: 55px;
-    height: auto;
-    padding: 4px;
+.contenedor-acordeon h2{
     text-align: center;
-    border-radius: 12px;
-    border: 4px;
-    border-bottom-style: inset;
-    font-weight: 700;
-}
-button.btn.btn-outline-success.my-2.my-sm-0 { /* definimos estilos a los botones: enviar, suscribirme */
-    color: white;
-    border-color: aliceblue;
-    background: #996410;
-    font-size: 10px;
-    font-weight: 700;
-}
-
-button.btn.btn-outline-success.my-2.my-sm-0:hover{ /* definimos hover a los botones: enviar, suscribirme */
-  background: yellow;
-  color: black;
-}
-
-
-/*damos estilos a las imagenes de tratamientos*/
-
-div#idtrata { /*Se define estilos al grupo de imagenes de tratamientos*/
-    text-align:left;
-}
-
-/* definimos estilos al contenido del PREfooter en general */
-.footerSedes {
-    font-size: 20px;
-    font-weight: 700;
-    color: aliceblue;
-    background: #7d6917;
-    width: 65px;
-    height: 30px;
-    text-align: center;
-
+    font-size: 40px;
+    margin-bottom: 9px;
+    background: cornsilk;
+    font-weight: 400;
+    font-style: italic;
+    border: solid 1px oldlace;
     border-radius: 9px;
 }
 
-.footerTelefonos {
+.acordeon{
+    background: #fff;
+}
+.acordeon label{
+    display: block;
+    padding: 10px;
     font-size: 20px;
-    font-weight: 700;
-    color: aliceblue;
-    background: #7d6917;
-    width: 100px;
-    height: 35px;
+    background: #bbad60;
+    color: #f3efef;
+    cursor: pointer;
+    margin-bottom: 3px;
+    transition: all 300ms ease;
+    width: 50%;
     text-align: center;
-    padding-top: 3px;
-    border-radius: 9px;
+    margin-left: 25%;
+    border-radius: 5px;
+}
+.acordeon label:hover{
+    background: #3c300d;
+}
+.acordeon .contenido-acordeon{
+    padding: 0px;
+    margin: 0px 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 300ms ease;
+}
+.btn-acordeon:checked ~ .contenido-acordeon{
+    max-height: 600px;
+    padding: 15px 0px;
+}
+.btn-acordeon{
+    display: none;
 }
 
-.footerHorarios {
-    font-size: 20px;
-    font-weight: 700;
-    color: aliceblue;
-    background: #7d6917;
-    width: 88px;
-    height: 29px;
+#tituloTratamientos {
+    width: 80%;
     text-align: center;
-    border-radius: 9px;
+    margin-left: 10%;
+    margin-top: 30px;
+    background: beige;
+    border-radius: 10px;
 }
 
-h6 {
-    font-size: 1rem;
-    color: mintcream;
-    font-weight: 700;
-    padding-top: 9px;
-    margin-bottom: 0.5rem;
-    line-height: 4px;
-}
-
-#LogoSite { /*estilos a la imagen principal*/
-    width: 14%;
-    margin-left: 500px;
-}
-
-/* Footer, es un dato adicional que aprendí y deseo anexarlo como mi firma al pie del sitio */
-
-footer {
-    /* text-align:center; */
-    background-color: #d9d9da00;
-    color: #222121;
-    font-size: 12px;
-    margin: 3px;
-    width: 60%;
-    margin-left: 2%;
-    height: 13px;
-    padding-bottom: 8px;
-    font-style: oblique;
-}
-
-#HechoPor{
-    font-weight: 700;
-    text-align: center;
-    list-style: none;   
-    text-decoration: none;
-    color: #691919;
-    padding-bottom: 6px;
-}
-
-#HechoPor:hover{
-    background: rgb(255, 255, 16);
-    color: black;
-    -webkit-box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
-    -moz-box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
-    box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
+.card {
+    display: block;
+    margin-left: 25%;
+    max-width: 50%;
 }
