@@ -1,20 +1,23 @@
   div#Mi-Menu {
     border: solid 0px ;
-    width: 210px;
+    width: 200px;
     height: 99vh;
     margin-top: 2px;
-    border-radius: 12px;
+    margin-left: 1px;
+    padding: 2px;
+    border-radius: 20px;
     background-color: f0f0f0;
     float: left;
-    box-shadow: -4px 11px 15px rgb(0 0 0 / 37%);
+
+    background-color: #9d882d;
 
   }
   div#Datos-Usuario img {
-    width: 80%;
-    border-radius: 12px;
-    border: solid 0px;
-    margin-left: calc(50% - 85px);
-    margin-top: 5px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: calc(50% - 75px);
+    margin-top: 12px;
     margin-bottom: 10px;
   }
   .lblnombre {

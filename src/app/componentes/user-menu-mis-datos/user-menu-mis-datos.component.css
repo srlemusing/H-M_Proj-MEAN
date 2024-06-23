@@ -1,19 +1,4 @@
-.titulo {
-  background: #ffc200;
-  color: white;
-  height: 38px;
-  border-radius: 6px;
-  padding-left: 10px;
-  font-weight: 500;
-  font-style: italic;
-  margin-top: 3px;
-  margin-bottom: 40px;
-  width: 84%;
-  margin-left: 16%;
-}
-div#Mis-Datos-C {
-  margin-left: 5px;
-}
+
 button.btn.btn-primary {
   margin-left: 5px;
 }

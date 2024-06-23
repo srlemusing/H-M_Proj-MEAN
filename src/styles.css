@@ -5,7 +5,7 @@
 /*Es la regla de la fuente obtenida, la seteamos en la etiqueta body*/
 body{
     font-family: 'Poppins', sans-serif;
-    
+
 
 }
 
@@ -158,7 +158,7 @@ footer {
 #HechoPor{
     font-weight: 700;
     text-align: center;
-    list-style: none;   
+    list-style: none;
     text-decoration: none;
     color: #691919;
     padding-bottom: 6px;
@@ -172,22 +172,24 @@ footer {
     box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
 }
 .ventana {
-    width: calc(100% - 210px);
+    width: calc(100% - 215px);
     position: absolute;
-    margin-left: 210px;
-    border: solid 2px #00BCD4;
-    height: calc(100% - 35px);
+    margin-left: 204px;
+    border: solid 0px #9d882d;
+    height: 100%;
+    border-radius: 1px;
     overflow-x: auto;
 }
 .titulo {
-    background: #ffc200;
+    background: #9d882d;
     color: white;
-    height: 25px;
-    border-radius: 13px;
-    padding-left: 8px;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-top: 7px;
     font-weight: 500;
     font-style: italic;
-    margin-top: 3px;
+    margin-top: 2px;
     margin-bottom: 40px;
 }
 .btnadd {
@@ -201,11 +203,14 @@ footer {
     margin: 4px;
     right: 4px;
     position: absolute;
-    top: 25px;
+    top: 0px;
     cursor: pointer;
 }
 .table {
     width: 1152px;
     margin-bottom: 1rem;
     color: #212529;
+}
+div#Datos-Usuario img {
+  cursor: pointer;
 }
