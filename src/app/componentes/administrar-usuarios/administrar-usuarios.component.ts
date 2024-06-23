@@ -11,7 +11,7 @@ declare var Swal:any
 })
 export class AdministrarUsuariosComponent implements OnInit{
 
-    ngOnInit(): void {
+  ngOnInit(): void {
     this.CargarTodasusuarios()
   }
 
