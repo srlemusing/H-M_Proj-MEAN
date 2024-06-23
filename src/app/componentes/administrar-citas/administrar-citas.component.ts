@@ -12,32 +12,27 @@ declare var Swal:any
 export class AdministrarCitasComponent implements OnInit{
 
     ngOnInit(): void {
-    this.CargarTodasusuarios()
+    this.CargarTodascitas()
   }
 
     constructor(private peticion:PeticionService){}
-    usuario:String = ""
-    clave:String = ""
-    nombre:String = ""
-    apellidos:String = ""
-    cedula:String = ""
-    correo:String = ""
-    telefono:String = ""
-    estado:Number = 1
-    codigoact:String = ""
-    rol:Number = 3
-    datos:any[]=[]
-    datosusuarios:any[]=[]
+    id_ciudad:any[]=[]
+    id_depto:any[]=[]
+    id_usuarioCliente:any[]=[]
+    id_tratamiento:any[]=[]
+    fechayhora:any[]=[]
+    datos:any[]=[]   
+    datoscitas:any[]=[]
     Idseleccionado:string=""
 
 /**
- * funcion para cargar datos de las usuarios
+ * funcion para cargar datos de las citas
  */
-  CargarTodasusuarios(){
+  CargarTodascitas(){
 
     let post = {
       Host:this.peticion.urlHost,
-      path:"/usuarios/list",
+      path:"/citas/list",
       payload:{
       }
     }
@@ -54,30 +49,22 @@ export class AdministrarCitasComponent implements OnInit{
 
   AbrirModal(){
 
-    this.nombre = ""
-    this.apellidos = ""
-    this.cedula = ""
-    this.correo = ""
-    this.telefono = ""
-    this.estado = 1
-    this.Idseleccionado = ""
+    this.id_ciudad = []
+    this.id_depto = []
+    this.id_usuarioCliente = []
+    this.id_tratamiento = []
+    this.fechayhora = []
     $('#modalnuevo').modal('show')
   }
   Guardar(){
     let post = {
       Host:this.peticion.urlHost,
-      path:"/usuarios/save",
+      path:"/citas/save",
       payload:{
-        usuario:this.usuario,
-        clave:this.clave,
-        nombre:this.nombre,
-        apellidos:this.apellidos,
-        cedula:this.cedula,
-        correo:this.correo,
-        telefono:this.telefono,
-        estado:this.estado,
-        codigoact:this.codigoact,
-        rol:this.rol
+        id_ciudad:this.id_ciudad,
+        id_depto:this.id_depto,
+        id_usuarioCliente:this.id_usuarioCliente,
+        id_tratamiento:this.id_tratamiento
       }
     }
   
@@ -95,7 +82,7 @@ export class AdministrarCitasComponent implements OnInit{
 
 
           $('#modalnuevo').modal('hide')
-          this.CargarTodasusuarios()
+          this.CargarTodascitas()
         }
         else{
 
@@ -119,7 +106,7 @@ export class AdministrarCitasComponent implements OnInit{
     this.Idseleccionado=id
     let post = {
       Host:this.peticion.urlHost,
-      path:"/usuarios/listId",
+      path:"/citas/listId",
       payload:{
         _id:id
       }
@@ -128,16 +115,13 @@ export class AdministrarCitasComponent implements OnInit{
     this.peticion.Get(post.Host+post.path).then(
       (res:any) => {
         console.log(res)
-        this.usuario=res.data[0].usuario
-        this.clave=res.data[0].clave
-        this.nombre=res.data[0].nombre
-        this.apellidos=res.data[0].apellidos
-        this.cedula=res.data[0].cedula
-        this.correo=res.data[0].correo
-        this.telefono=res.data[0].telefono
-        this.estado=res.data[0].estado
-        this.codigoact=res.data[0].codigoact
-        this.rol=res.data[0].rol
+        this.id_ciudad=res.data[0].id_ciudad
+        this.id_depto=res.data[0].id_depto
+        this.id_usuarioCliente=res.data[0].id_usuarioCliente
+        this.id_tratamiento=res.data[0].id_tratamiento
+        this.fechayhora=res.data[0].fechayhora
+
+
         $('#modalnuevo').modal('show')
       }
     )
@@ -145,7 +129,7 @@ export class AdministrarCitasComponent implements OnInit{
   Eliminar(){
     let post = {
       Host:this.peticion.urlHost,
-      path:"/usuarios/delete",
+      path:"/citas/delete",
       payload:{
         _id:this.Idseleccionado
       }
@@ -163,7 +147,7 @@ export class AdministrarCitasComponent implements OnInit{
           });
 
           $('#modalnuevo').modal('hide')
-          this.CargarTodasusuarios()
+          this.CargarTodascitas()
         }
         else{
 
@@ -179,18 +163,13 @@ export class AdministrarCitasComponent implements OnInit{
   Actualizar(){
     let post = {
       Host:this.peticion.urlHost,
-      path:"/usuarios/update",
+      path:"/citas/update",
       payload:{
-        usuario:this.usuario,
-        clave:this.clave,
-        nombre:this.nombre,
-        apellidos:this.apellidos,
-        cedula:this.cedula,
-        correo:this.correo,
-        telefono:this.telefono,
-        estado:this.estado,
-        codigoact:this.codigoact,
-        rol:this.rol
+        id_ciudad:this.id_ciudad,
+        id_depto:this.id_depto,
+        id_usuarioCliente:this.id_usuarioCliente,
+        id_tratamiento:this.id_tratamiento,
+        fechayhora:this.fechayhora
       }
     }
   
@@ -207,7 +186,7 @@ export class AdministrarCitasComponent implements OnInit{
           });
 
           $('#modalnuevo').modal('hide')
-          this.CargarTodasusuarios()
+          this.CargarTodascitas()
         }
         else{
 
