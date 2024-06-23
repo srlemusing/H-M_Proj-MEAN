@@ -42,10 +42,10 @@ export class AdministrarCitasComponent implements OnInit{
       }
     }
   
-    this.peticion.Post(post.Host+post.path, post.payload).then(
+    this.peticion.Get(post.Host+post.path).then(
       (res:any) => {
         console.log(res)
-        this.datosusuarios=res.data
+        this.datos=res.data
       }
       
   )
@@ -125,7 +125,7 @@ export class AdministrarCitasComponent implements OnInit{
       }
     }
   
-    this.peticion.Post(post.Host+post.path, post.payload).then(
+    this.peticion.Get(post.Host+post.path).then(
       (res:any) => {
         console.log(res)
         this.usuario=res.data[0].usuario
@@ -151,7 +151,7 @@ export class AdministrarCitasComponent implements OnInit{
       }
     }
   
-    this.peticion.Post(post.Host+post.path, post.payload).then(
+    this.peticion.Delete(post.Host+post.path, post.payload).then(
       (res:any) => {
         console.log(res)
         if(res.state==true){
@@ -195,7 +195,7 @@ export class AdministrarCitasComponent implements OnInit{
     }
   
 
-    this.peticion.Post(post.Host+post.path, post.payload).then(
+    this.peticion.Put(post.Host+post.path, post.payload).then(
       (res:any) => {
         console.log(res)
         if(res.state==true){

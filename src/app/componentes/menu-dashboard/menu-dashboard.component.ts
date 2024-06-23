@@ -18,8 +18,8 @@ export class MenuDashboardComponent implements OnInit{
     this.cargarestado()
   }
 
-  nombre:String = "Cargando..."
-  rol:String = "Cargando..."
+  nombre:String = ""
+  rol:String = ""
 
   cargarestado(){
     var post={

@@ -45,7 +45,7 @@ export class AdministrarUsuariosComponent implements OnInit{
     this.peticion.Get(post.Host+post.path).then(
       (res:any) => {
         console.log(res)
-        this.datosusuarios=res.data
+        this.datos=res.data
       }
       
   )
@@ -53,7 +53,7 @@ export class AdministrarUsuariosComponent implements OnInit{
   }
 
   AbrirModal(){
-    this.usuario = this.datosusuarios[2].usuario
+    this.usuario = ""
     this.clave = ""
     this.nombre = ""
     this.apellidos = ""
@@ -62,7 +62,7 @@ export class AdministrarUsuariosComponent implements OnInit{
     this.telefono = ""
     this.estado = 1
     this.codigoact = ""
-    this.rol = 3
+    this.rol = 1
     this.Idseleccionado = ""
     $('#modalnuevo').modal('show')
   }

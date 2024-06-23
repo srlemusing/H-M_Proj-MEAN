@@ -5,24 +5,21 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class InterceptorService implements HttpInterceptor{
+export class InterceptorService implements HttpInterceptor {
 
   constructor() { }
-  requestOption: any = {}
+
+  requestOption:any={}
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-
-    console.log("interceptor")
-    this.requestOption = {
+    console.log("intercepto")
+    this.requestOption={
       headers: new HttpHeaders({
-        //"Contet-Type":"application/json;charset=UTF-8"
-      }), withCredentials:true // <----- esa configuracion es muy importante.
+        //"Content-Type":"application/json;charset=UTF-8"
+      }), withCredentials: true // <----- esa configuracion es muy importante.
     }
-
-    const reqClone = req.clone(this.requestOption)
+    const reqClone=req.clone(this.requestOption)
     return next.handle(reqClone)
-
-
   }
 
 }

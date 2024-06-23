@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+declare var Swal:any
+
 @Injectable({
   providedIn: 'root'
 })
 export class PeticionService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   urlHost:string="http://localhost:3000"
 
@@ -16,16 +18,20 @@ export class PeticionService {
 
       this.http.post(url,data).toPromise().then(
         (res:any) => {
+          if(res.permisos==true){
+            Swal.fire({
+              title:"Ouch!",
+              text:res.mensaje,
+              icon:"error"
+            });
+          }
           resolve(res)
         }
       ).catch((error) => {
         reject(error)      
       })
-
-  })
-
-  return promise
-
+    })
+    return promise
   } 
 
   Put(url:string,data:{}){
@@ -39,11 +45,8 @@ export class PeticionService {
       ).catch((error) => {
         reject(error)      
       })
-
-  })
-
-  return promise
-
+    })
+    return promise
   } 
 
   Delete(url:string,data:{}){

@@ -8,9 +8,7 @@
     border-radius: 20px;
     background-color: f0f0f0;
     float: left;
-
     background-color: #9d882d;
-
   }
   div#Datos-Usuario img {
     width: 150px;
@@ -52,8 +50,5 @@
   .opciones {
     padding-left: 10px;
   }
-  .ventana {
-    border: solid 0px ;
-}
 
 
