@@ -5,11 +5,9 @@
   <div class="titulo">Mis Citas</div>
   <div class="btnadd">+</div>
   <div class="datos">
-
     <table class="table table-hover col-12">
       <thead>
         <tr>
-          <th scope="col">#</th>
           <th scope="col">First</th>
           <th scope="col">Last</th>
           <th scope="col">Handle</th>
@@ -17,7 +15,6 @@
       </thead>
       <tbody>
         <tr>
-          <th scope="row">1</th>
           <td>Mark</td>
           <td>Otto</td>
           <td>mdo</td>
@@ -35,7 +32,75 @@
         </tr>
       </tbody>
     </table>
-
   </div>
-
 </div>
+
+
+ <!-- Button trigger modal -->
+ <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Admiistrar Citas</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group col-md-6">
+          <label for="usuarioCliente">Usuario:</label>
+          <input name="usuario" type="text" class="form-control" id="usuarioCliente" [(ngModel)]="id_usuarioCliente" >
+        </div>
+
+        <div class="form-group">
+          <label for="id_ciudad">Ciudad</label>
+          <select class="form-control" id="id_ciudad"  [(ngModel)]="id_ciudad">
+            <option>Medellin</option>
+            <option>Quibdó</option>
+            <option>Bogotá</option>
+            <option>Monteria</option>
+            <option>Pasto</option>
+          </select>
+
+          <label for="id_depto">Departamento</label>
+          <select class="form-control" id="id_depto"  [(ngModel)]="id_depto">
+            <option>Antioquia</option>
+            <option>Chocó</option>
+            <option>Cundinamarca</option>
+            <option>Cordoba</option>
+            <option>Nariño</option>
+          </select>
+
+        <label for="id_tratamiento">Procedimiento</label>
+        <select class="form-control" id="id_tratamiento"  [(ngModel)]="id_tratamiento">
+          <option>Limpieza</option>
+          <option>Diseño de sonrisa</option>
+          <option>Blamqueamiento</option>
+          <option>Ortodoncia</option>
+          <option>Valoración</option>
+        </select>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="fechayhora">Fecha:</label>
+            <input type="date" class="form-control" id="fechayhora"  [(ngModel)]="fechayhora">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="fechayhora">Hora:</label>
+            <input type="time" class="form-control" id="fechayhora"  [(ngModel)]="fechayhora">
+          </div>
+        </div>
+
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>

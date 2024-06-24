@@ -32,7 +32,7 @@ export class MenuDashboardComponent implements OnInit{
     this.peticion.Post(post.Host+post.path,post.payload).then((res:any)=>{
       console.log(res)
       if(res.nombre==""||res.nombre==undefined){
-        //this.router.navigate(["/login"])
+        this.router.navigate(["/login"])
       }
       this.nombre=res.nombre
       this.rol=res.rol

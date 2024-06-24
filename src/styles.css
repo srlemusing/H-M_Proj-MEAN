@@ -182,14 +182,14 @@ footer {
     border: solid 0px;
 }
 .titulo {
-    background: #ffc200;
+    background: #9d882d;
     color: white;
     height: 38px;
     border-radius: 6px;
     padding-left: 10px;
     font-weight: 500;
     font-style: italic;
-    margin-top: 15px;
+    margin-top: 2px;
     margin-bottom: 40px;
     width: 95%;
     margin-left: 8px;
@@ -208,7 +208,7 @@ footer {
     position: absolute;
     top: 0px;
     cursor: pointer;
-    margin-top: 15px;
+
 }
 .table {
     width: 1140px;
@@ -217,7 +217,7 @@ footer {
     margin-top: -30px;
     margin-left: 9px;
     border-radius: 1px;
-  }  
+  }
 div#Datos-Usuario img {
   cursor: pointer;
 }

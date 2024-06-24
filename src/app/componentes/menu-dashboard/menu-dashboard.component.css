@@ -1,6 +1,6 @@
   div#Mi-Menu {
     border: solid 0px ;
-    width: 200px;
+    width: 210px;
     height: 99vh;
     margin-top: 2px;
     margin-left: 1px;
@@ -39,7 +39,7 @@
     width: 100%;
     font-size: 14px;
     padding: 1px;
-    margin-left: 5px;
+    margin-left: -2px;
     transition: 0.2s ease-in-out;
     color: rgb(0, 0, 0);
   }

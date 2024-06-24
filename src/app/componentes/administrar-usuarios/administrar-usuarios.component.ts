@@ -41,13 +41,13 @@ export class AdministrarUsuariosComponent implements OnInit{
       payload:{
       }
     }
-  
+
     this.peticion.Get(post.Host+post.path).then(
       (res:any) => {
         console.log(res)
         this.datos=res.data
       }
-      
+
   )
 
   }
@@ -83,7 +83,7 @@ export class AdministrarUsuariosComponent implements OnInit{
         rol:this.rol
       }
     }
-  
+
 
     this.peticion.Post(post.Host+post.path, post.payload).then(
       (res:any) => {
@@ -127,21 +127,24 @@ export class AdministrarUsuariosComponent implements OnInit{
         _id:id
       }
     }
-  
+
     this.peticion.Get(post.Host+post.path).then(
       (res:any) => {
         console.log(res)
-        this.usuario=res.data[0].usuario
-        this.clave=res.data[0].clave
-        this.nombre=res.data[0].nombre
-        this.apellidos=res.data[0].apellidos
-        this.cedula=res.data[0].cedula
-        this.correo=res.data[0].correo
-        this.telefono=res.data[0].telefono
-        this.estado=res.data[0].estado
-        this.codigoact=res.data[0].codigoact
-        this.rol=res.data[0].rol
-        $('#modalnuevo').modal('show')
+        //if(res.data != undefined){}<-----------podria servir en caso de un error de lectura
+          this.usuario=res.data[0].usuario
+          this.clave=res.data[0].clave
+          this.nombre=res.data[0].nombre
+          this.apellidos=res.data[0].apellidos
+          this.cedula=res.data[0].cedula
+          this.correo=res.data[0].correo
+          this.telefono=res.data[0].telefono
+          this.estado=res.data[0].estado
+          this.codigoact=res.data[0].codigoact
+          this.rol=res.data[0].rol
+          $('#modalnuevo').modal('show')
+
+
       }
     )
   }
@@ -153,7 +156,7 @@ export class AdministrarUsuariosComponent implements OnInit{
         _id:this.Idseleccionado
       }
     }
-  
+
     this.peticion.Delete(post.Host+post.path, post.payload).then(
       (res:any) => {
         console.log(res)
@@ -196,7 +199,7 @@ export class AdministrarUsuariosComponent implements OnInit{
         rol:this.rol
       }
     }
-  
+
 
     this.peticion.Put(post.Host+post.path, post.payload).then(
       (res:any) => {

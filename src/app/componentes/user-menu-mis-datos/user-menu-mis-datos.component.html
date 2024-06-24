@@ -2,59 +2,64 @@
 
 <div class="ventana">
   <div class="titulo">Mis Datos</div>
-      <div id="Mis-Datos-C" class="col-12">
-        <form id="Mis-Datos-C">
+      <div id="Mis-Datos-C" class="col-sm-12 col-md-6 ">
+        <div id="Mis-Datos-C">
           <div class="form-row">
 
-            <div *ngFor="let item of datos" (click)="EditarId(item._id)"  class="form-group col-md-6">
+            <div class="form-group col-md-6">
               <label for="inputNombre">Usuario:</label>
-              <input [(ngModel)]="item.usuario" name="usuario" type="text" class="form-control">
+              <input name="usuario" type="text" class="form-control">
             </div>
 
-            <div *ngFor="let item of datos" (click)="EditarId(item._id)" class="form-group col-md-6">
+            <div class="form-group col-md-6">
               <label for="inputApellido">Clave:</label>
-              <input [(ngModel)]="item.clave" name="password" type="text" class="form-control" >
+              <input  name="password" type="text" class="form-control" >
             </div>
 
-            <div *ngFor="let item of datos" (click)="EditarId(item._id)" class="form-group col-md-6">
+            <div class="form-group col-md-6">
               <label for="inputCedula">Nombre:</label>
-              <input [(ngModel)]="item.nombre" name="nombre" type="text" class="form-control" >
+              <input  name="nombre" type="text" class="form-control" >
             </div>
 
-            <div *ngFor="let item of datos" (click)="EditarId(item._id)" class="form-group col-md-6">
+            <div class="form-group col-md-6">
               <label for="inputEmail4">Apellidos:</label>
-              <input [(ngModel)]="item.apellidos" name="apellidos" type="text" class="form-control" >
+              <input name="apellidos" type="text" class="form-control" >
             </div>
 
-            <div *ngFor="let item of datos" (click)="EditarId(item._id)" class="form-group col-md-6">
+            <div class="form-group col-md-6">
               <label for="inputEmail4">Cedula:</label>
-              <input [(ngModel)]="item.cedula" name="cedula" type="text" class="form-control" >
+              <input  name="cedula" type="text" class="form-control" >
             </div>
 
-            <div *ngFor="let item of datos" (click)="EditarId(item._id)" class="form-group">
+            <div class="form-group">
               <label for="inputAddress">Correo:</label>
-              <input [(ngModel)]="item.correo" name="correo" type="text" class="form-control" id="inputAddress">
+              <input  name="correo" type="text" class="form-control">
             </div>
 
-            <div *ngFor="let item of datos" (click)="EditarId(item._id)" class="form-group">
+            <div class="form-group">
               <label for="inputAddress">Telefono:</label>
-              <input [(ngModel)]="item.telefono" name="telefono" type="text" class="form-control" id="inputAddress">
+              <input  name="telefono" type="text" class="form-control">
             </div>
 
-            <div *ngFor="let item of datos" (click)="EditarId(item._id)" class="form-group">
+            <div class="form-group">
               <label for="inputAddress">Rol:</label>
-              <input [(ngModel)]="item.rol" name="rol" type="text" class="form-control" id="inputAddress">
+              <input  name="rol" type="text" class="form-control">
             </div>
           </div>
 
 
-          <button type="submit" class="btn btn-primary" (click)="AbrirModal()">Actualizar</button>
-        </form>
+          <button type="submit" class="btn btn-primary">Actualizar</button>
+        </div>
       </div>
   </div>
 
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
 <!-- Modal -->
-<div class="modal fade" id="ModalDatos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -65,45 +70,50 @@
       </div>
       <div class="modal-body">
 
-        <div class="form-group">
-          <label for="usuario">Usuario</label>
-          <input type="email" class="form-control" id="usuario" [(ngModel)]="usuario">
+        <div class="form-group col-md-6">
+          <label for="inputNombre">Usuario:</label>
+          <input name="usuario" type="text" class="form-control" id="usuario" [(ngModel)]="usuario" >
         </div>
-        <div class="form-group">
-          <label for="clave">Clave</label>
-          <input type="email" class="form-control" id="clave" [(ngModel)]="clave">
+
+        <div class="form-group col-md-6">
+          <label for="inputApellido">Clave:</label>
+          <input  name="password" type="text" class="form-control" id="clave" [(ngModel)]="clave" >
         </div>
-        <div class="form-group">
-          <label for="nombre">Nombre</label>
-          <input type="email" class="form-control" id="nombre" [(ngModel)]="nombre">
+
+        <div class="form-group col-md-6">
+          <label for="inputCedula">Nombre:</label>
+          <input  name="nombre" type="text" class="form-control" id="nombre" [(ngModel)]="nombre" >
         </div>
-        <div class="form-group">
-          <label for="apellidos">Apellidos</label>
-          <input type="email" class="form-control" id="apellidos" [(ngModel)]="apellidos">
+
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Apellidos:</label>
+          <input name="apellidos" type="text" class="form-control" id="apellidos" [(ngModel)]="apellidos" >
         </div>
-        <div class="form-group">
-          <label for="cedula">Cedula</label>
-          <input type="email" class="form-control" id="cedula" [(ngModel)]="cedula" disabled="IdSeleccionado != ''" >
+
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Cedula:</label>
+          <input  name="cedula" type="text" class="form-control" id="cedula" [(ngModel)]="cedula" >
         </div>
-        <div class="form-group">
-          <label for="correo">Correo</label>
-          <input type="email" class="form-control" id="correo" [(ngModel)]="correo">
+
+        <div class="form-group col-md-6">
+          <label for="inputAddress">Correo:</label>
+          <input  name="correo" type="text" class="form-control" id="correo"[(ngModel)]="correo" >
         </div>
-        <div class="form-group">
-          <label for="telefono">Telefono</label>
-          <input type="email" class="form-control" id="telefono" [(ngModel)]="telefono">
+
+        <div class="form-group col-md-6">
+          <label for="inputAddress">Telefono:</label>
+          <input  name="telefono" type="text" class="form-control" id="telefono"[(ngModel)]="telefono" >
         </div>
-        <div class="form-group">
-          <label for="rol">Rol</label>
-          <input type="email" class="form-control" id="rol" [(ngModel)]="rol">
+
+        <div class="form-group col-md-6">
+          <label for="inputAddress">Rol:</label>
+          <input  name="rol" type="text" class="form-control" id="rol"[(ngModel)]="rol" >
         </div>
-        ...
+      </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-success" (click)="Guardar()" *ngIf="IdSeleccionado == ''" >Guardar</button>
-        <button type="button" class="btn btn-primary" (click)="Actualizar()" *ngIf="IdSeleccionado != ''" >Actualizar</button>
-        <button type="button" class="btn btn-danger" (click)="Eliminar()" *ngIf="IdSeleccionado != ''" >Eliminar</button>
+        <button type="button" class="btn btn-primary">Guardar Cambios</button>
       </div>
     </div>
   </div>
-</div>
+

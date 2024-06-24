@@ -28,11 +28,11 @@ export class PeticionService {
           resolve(res)
         }
       ).catch((error) => {
-        reject(error)      
+        reject(error)
       })
     })
     return promise
-  } 
+  }
 
   Put(url:string,data:{}){
 
@@ -43,11 +43,11 @@ export class PeticionService {
           resolve(res)
         }
       ).catch((error) => {
-        reject(error)      
+        reject(error)
       })
     })
     return promise
-  } 
+  }
 
   Delete(url:string,data:{}){
 
@@ -58,14 +58,14 @@ export class PeticionService {
           resolve(res)
         }
       ).catch((error) => {
-        reject(error)      
+        reject(error)
       })
 
   })
 
   return promise
 
-  } 
+  }
 
   Get(url:string){
 
@@ -76,13 +76,13 @@ export class PeticionService {
           resolve(res)
         }
       ).catch((error) => {
-        reject(error)      
+        reject(error)
       })
 
   })
 
   return promise
 
-  } 
+  }
 
 }

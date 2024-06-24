@@ -8,11 +8,10 @@ import { Observable } from 'rxjs';
 export class InterceptorService implements HttpInterceptor {
 
   constructor() { }
-
   requestOption:any={}
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.log("intercepto")
+    console.log("interceptor")
     this.requestOption={
       headers: new HttpHeaders({
         //"Content-Type":"application/json;charset=UTF-8"

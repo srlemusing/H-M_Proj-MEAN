@@ -21,7 +21,7 @@ export class AdministrarCitasComponent implements OnInit{
     id_usuarioCliente:any[]=[]
     id_tratamiento:any[]=[]
     fechayhora:any[]=[]
-    datos:any[]=[]   
+    datos:any[]=[]
     datoscitas:any[]=[]
     Idseleccionado:string=""
 
@@ -36,13 +36,13 @@ export class AdministrarCitasComponent implements OnInit{
       payload:{
       }
     }
-  
+
     this.peticion.Get(post.Host+post.path).then(
       (res:any) => {
         console.log(res)
         this.datos=res.data
       }
-      
+
   )
 
   }
@@ -67,7 +67,7 @@ export class AdministrarCitasComponent implements OnInit{
         id_tratamiento:this.id_tratamiento
       }
     }
-  
+
 
     this.peticion.Post(post.Host+post.path, post.payload).then(
       (res:any) => {
@@ -111,18 +111,19 @@ export class AdministrarCitasComponent implements OnInit{
         _id:id
       }
     }
-  
+
     this.peticion.Get(post.Host+post.path).then(
       (res:any) => {
         console.log(res)
-        this.id_ciudad=res.data[0].id_ciudad
-        this.id_depto=res.data[0].id_depto
-        this.id_usuarioCliente=res.data[0].id_usuarioCliente
-        this.id_tratamiento=res.data[0].id_tratamiento
-        this.fechayhora=res.data[0].fechayhora
+        //if(res.data != undefined){}<-----------podria servir en caso de un error de lectura
+          this.id_ciudad=res.data[0].id_ciudad
+          this.id_depto=res.data[0].id_depto
+          this.id_usuarioCliente=res.data[0].id_usuarioCliente
+          this.id_tratamiento=res.data[0].id_tratamiento
+          this.fechayhora=res.data[0].fechayhora
+          $('#modalnuevo').modal('show')
 
 
-        $('#modalnuevo').modal('show')
       }
     )
   }
@@ -134,7 +135,7 @@ export class AdministrarCitasComponent implements OnInit{
         _id:this.Idseleccionado
       }
     }
-  
+
     this.peticion.Delete(post.Host+post.path, post.payload).then(
       (res:any) => {
         console.log(res)
@@ -172,7 +173,7 @@ export class AdministrarCitasComponent implements OnInit{
         fechayhora:this.fechayhora
       }
     }
-  
+
 
     this.peticion.Put(post.Host+post.path, post.payload).then(
       (res:any) => {

@@ -12,7 +12,7 @@ export class LoginComponent {
 
 constructor(private peticion: PeticionService, private router:Router){}
 
-usuario:string = "stebanprueba@gmail.com"
+usuario:string = "Steband97110"
 clave:string = "123456"
 
 login(){
@@ -31,11 +31,9 @@ login(){
     if(respuesta.state == true){
 
       Swal.fire({
-        position: "top-end",
-        icon: "success",
         title: "Bienvenido!",
-        showConfirmButton: false,
-        timer: 1500
+        text: respuesta.mensaje,
+        icon: "success"
       });
 
       this.router.navigate(["dashboard"])
@@ -44,11 +42,9 @@ login(){
     else{
 
       Swal.fire({
-        position: "top-end",
-        icon: "error",
         title: "Ouch!!",
-        showConfirmButton: false,
-        timer: 1500
+        text: respuesta.mensaje,
+        icon: "error"
       });
 
     }
