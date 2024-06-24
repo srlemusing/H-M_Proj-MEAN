@@ -12,8 +12,8 @@ export class LoginComponent {
 
 constructor(private peticion: PeticionService, private router:Router){}
 
-usuario:string = "Steband97110"
-clave:string = "123456"
+usuario:string = ""
+clave:string = ""
 
 login(){
 

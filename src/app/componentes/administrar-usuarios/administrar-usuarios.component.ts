@@ -131,7 +131,7 @@ export class AdministrarUsuariosComponent implements OnInit{
     this.peticion.Get(post.Host+post.path).then(
       (res:any) => {
         console.log(res)
-        //if(res.data != undefined){}<-----------podria servir en caso de un error de lectura
+        if(res.data != undefined){
           this.usuario=res.data[0].usuario
           this.clave=res.data[0].clave
           this.nombre=res.data[0].nombre
@@ -143,6 +143,9 @@ export class AdministrarUsuariosComponent implements OnInit{
           this.codigoact=res.data[0].codigoact
           this.rol=res.data[0].rol
           $('#modalnuevo').modal('show')
+
+        }    //<-----------podria servir en caso de un error de lectura
+
 
 
       }
@@ -199,8 +202,6 @@ export class AdministrarUsuariosComponent implements OnInit{
         rol:this.rol
       }
     }
-
-
     this.peticion.Put(post.Host+post.path, post.payload).then(
       (res:any) => {
         console.log(res)

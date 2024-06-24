@@ -15,7 +15,7 @@ export class UserMenuMisCitasComponent implements OnInit{
 
   id_ciudad:string = ""
   id_depto:string = ""
-  id_usuarioCliente:string = "Steband97"
+  id_usuarioCliente:string = ""
   id_tratamiento:string = ""
   fechayhora:any = ""
   datos:any[] = []

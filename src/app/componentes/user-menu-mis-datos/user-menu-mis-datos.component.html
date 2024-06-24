@@ -4,62 +4,57 @@
   <div class="titulo">Mis Datos</div>
       <div id="Mis-Datos-C" class="col-sm-12 col-md-6 ">
         <div id="Mis-Datos-C">
-          <div class="form-row">
+          <div class="form-row" (click)="EditarId(_id)">
 
             <div class="form-group col-md-6">
               <label for="inputNombre">Usuario:</label>
-              <input name="usuario" type="text" class="form-control">
+              <input name="usuario" type="text" class="form-control" id="usuario" [(ngModel)]="usuario" >
             </div>
 
             <div class="form-group col-md-6">
               <label for="inputApellido">Clave:</label>
-              <input  name="password" type="text" class="form-control" >
+              <input  name="password" type="text" class="form-control" id="usuario" [(ngModel)]="clave" >
             </div>
 
             <div class="form-group col-md-6">
               <label for="inputCedula">Nombre:</label>
-              <input  name="nombre" type="text" class="form-control" >
+              <input  name="nombre" type="text" class="form-control" id="nombre" [(ngModel)]="nombre" >
             </div>
 
             <div class="form-group col-md-6">
               <label for="inputEmail4">Apellidos:</label>
-              <input name="apellidos" type="text" class="form-control" >
+              <input name="apellidos" type="text" class="form-control" id="apellidos" [(ngModel)]="apellidos" >
             </div>
 
             <div class="form-group col-md-6">
               <label for="inputEmail4">Cedula:</label>
-              <input  name="cedula" type="text" class="form-control" >
+              <input  name="cedula" type="text" class="form-control" id="cedula" [(ngModel)]="cedula" >
             </div>
 
             <div class="form-group">
               <label for="inputAddress">Correo:</label>
-              <input  name="correo" type="text" class="form-control">
+              <input  name="correo" type="text" class="form-control"id="correo" [(ngModel)]="correo" >
             </div>
 
             <div class="form-group">
               <label for="inputAddress">Telefono:</label>
-              <input  name="telefono" type="text" class="form-control">
+              <input  name="telefono" type="text" class="form-control"id="telefono" [(ngModel)]="telefono" >
             </div>
 
             <div class="form-group">
               <label for="inputAddress">Rol:</label>
-              <input  name="rol" type="text" class="form-control">
+              <input  name="rol" type="text" class="form-control"id="rol" [(ngModel)]="rol" >
             </div>
           </div>
 
 
-          <button type="submit" class="btn btn-primary">Actualizar</button>
+          <button type="submit" class="btn btn-primary"(click)="AbrirModal()">Actualizar</button>
         </div>
       </div>
   </div>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal-user" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -112,7 +107,7 @@
       </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Guardar Cambios</button>
+        <button type="button" class="btn btn-primary" (click)="Actualizar()">Guardar Cambios</button>
       </div>
     </div>
   </div>
