@@ -20,6 +20,7 @@ export class MenuDashboardComponent implements OnInit{
 
   nombre:String = ""
   rol:String = ""
+  _id:string = ""
 
   cargarestado(){
     var post={
@@ -30,12 +31,13 @@ export class MenuDashboardComponent implements OnInit{
     }
 
     this.peticion.Post(post.Host+post.path,post.payload).then((res:any)=>{
-      console.log(res)
+      console.log("lo que sea",res)
       if(res.nombre==""||res.nombre==undefined){
         this.router.navigate(["/login"])
       }
       this.nombre=res.nombre
       this.rol=res.rol
+      this._id =res._id
     })
   }
 

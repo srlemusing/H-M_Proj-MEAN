@@ -1,5 +1,7 @@
 import { Component, Host, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PeticionService } from 'src/app/servicios/peticion.service';
+
 declare var $:any
 declare var Swal:any
 
@@ -12,9 +14,10 @@ declare var Swal:any
 
     ngOnInit(): void {
       this.CargarDatos()
+      this.cargarestado()
     }
 
-    constructor(private peticion:PeticionService){}
+    constructor(private peticion:PeticionService, private router:Router){}
 
     _id:string = ""
     usuario:string = ""
@@ -31,11 +34,31 @@ declare var Swal:any
     Idseleccionado:string = ""
 
 
-    CargarDatos(){
-      var get = {
+    cargarestado(){
+      var post={
         Host:this.peticion.urlHost,
-        path:"/usuarios/list",
+        path:"/usuarios/state",
         payload:{
+        }
+      }
+
+      this.peticion.Post(post.Host+post.path,post.payload).then((res:any)=>{
+        console.log("lo que sea",res)
+        if(res.nombre==""||res.nombre==undefined){
+          this.router.navigate(["/login"])
+        }
+        this.nombre=res.nombre
+        this.rol=res.rol
+        this._id =res._id
+      })
+    }
+
+    CargarDatos(){
+      let get = {
+        Host:this.peticion.urlHost,
+        path:"/usuarios/listId",
+        payload:{
+          _id:this._id
         }
       }
       this.peticion.Get(get.Host + get.path).then(
@@ -100,6 +123,7 @@ declare var Swal:any
           rol:this.rol
         }
       }
+      console.log(post)
       this.peticion.Put(post.Host+post.path, post.payload).then(
         (res:any) => {
           console.log(res)
