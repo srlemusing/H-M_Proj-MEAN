@@ -115,13 +115,15 @@ export class AdministrarCitasComponent implements OnInit{
     this.peticion.Get(post.Host+post.path).then(
       (res:any) => {
         console.log(res)
-        //if(res.data != undefined){}<-----------podria servir en caso de un error de lectura
+        if(res.data != undefined){
           this.id_ciudad=res.data[0].id_ciudad
           this.id_depto=res.data[0].id_depto
           this.id_usuarioCliente=res.data[0].id_usuarioCliente
           this.id_tratamiento=res.data[0].id_tratamiento
           this.fechayhora=res.data[0].fechayhora
           $('#modalnuevo').modal('show')
+        }      //<-----------podria servir en caso de un error de lectura
+
 
 
       }

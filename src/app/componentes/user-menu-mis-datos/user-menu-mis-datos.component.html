@@ -8,42 +8,37 @@
 
             <div class="form-group col-md-6">
               <label for="inputNombre">Usuario:</label>
-              <input name="usuario" type="text" class="form-control" id="usuario" [(ngModel)]="usuario" >
+              <input name="usuario" type="text" class="form-control" id="usuario" [(ngModel)]="usuario" [readOnly]="true">
             </div>
 
-            <div class="form-group col-md-6">
+            <!-- <div class="form-group col-md-6">
               <label for="inputApellido">Clave:</label>
-              <input  name="password" type="text" class="form-control" id="usuario" [(ngModel)]="clave" >
-            </div>
+              <input  name="password" type="text" class="form-control" id="usuario" [(ngModel)]="clave" [readOnly]="true">
+            </div> -->
 
             <div class="form-group col-md-6">
               <label for="inputCedula">Nombre:</label>
-              <input  name="nombre" type="text" class="form-control" id="nombre" [(ngModel)]="nombre" >
+              <input  name="nombre" type="text" class="form-control" id="nombre" [(ngModel)]="nombre" [readOnly]="true">
             </div>
 
             <div class="form-group col-md-6">
               <label for="inputEmail4">Apellidos:</label>
-              <input name="apellidos" type="text" class="form-control" id="apellidos" [(ngModel)]="apellidos" >
+              <input name="apellidos" type="text" class="form-control" id="apellidos" [(ngModel)]="apellidos" [readOnly]="true">
             </div>
 
             <div class="form-group col-md-6">
               <label for="inputEmail4">Cedula:</label>
-              <input  name="cedula" type="text" class="form-control" id="cedula" [(ngModel)]="cedula" >
+              <input  name="cedula" type="text" class="form-control" id="cedula" [(ngModel)]="cedula" [readOnly]="true">
             </div>
 
             <div class="form-group">
               <label for="inputAddress">Correo:</label>
-              <input  name="correo" type="text" class="form-control"id="correo" [(ngModel)]="correo" >
+              <input  name="correo" type="text" class="form-control"id="correo" [(ngModel)]="correo" [readOnly]="true">
             </div>
 
             <div class="form-group">
               <label for="inputAddress">Telefono:</label>
-              <input  name="telefono" type="text" class="form-control"id="telefono" [(ngModel)]="telefono" >
-            </div>
-
-            <div class="form-group">
-              <label for="inputAddress">Rol:</label>
-              <input  name="rol" type="text" class="form-control"id="rol" [(ngModel)]="rol" >
+              <input  name="telefono" type="text" class="form-control"id="telefono" [(ngModel)]="telefono" [readOnly]="true">
             </div>
           </div>
 
@@ -70,10 +65,10 @@
           <input name="usuario" type="text" class="form-control" id="usuario" [(ngModel)]="usuario" >
         </div>
 
-        <div class="form-group col-md-6">
+        <!-- <div class="form-group col-md-6">
           <label for="inputApellido">Clave:</label>
           <input  name="password" type="text" class="form-control" id="clave" [(ngModel)]="clave" >
-        </div>
+        </div> -->
 
         <div class="form-group col-md-6">
           <label for="inputCedula">Nombre:</label>
@@ -87,7 +82,7 @@
 
         <div class="form-group col-md-6">
           <label for="inputEmail4">Cedula:</label>
-          <input  name="cedula" type="text" class="form-control" id="cedula" [(ngModel)]="cedula" >
+          <input  name="cedula" type="text" class="form-control" id="cedula" [(ngModel)]="cedula" [readOnly]="true">
         </div>
 
         <div class="form-group col-md-6">
@@ -100,12 +95,8 @@
           <input  name="telefono" type="text" class="form-control" id="telefono"[(ngModel)]="telefono" >
         </div>
 
-        <div class="form-group col-md-6">
-          <label for="inputAddress">Rol:</label>
-          <input  name="rol" type="text" class="form-control" id="rol"[(ngModel)]="rol" >
-        </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" (click)="Actualizar()">Actualizar Cambios</button>
+          <button type="button" class="btn btn-primary" (click)="Actualizar()">Actualizar Datos</button>
         </div>
       </div>
 

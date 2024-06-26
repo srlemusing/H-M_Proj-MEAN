@@ -2,27 +2,27 @@
 <div class="ventana">
   <div class="titulo">Agendar Citas</div>
       <div id="Mis-Datos-C" class="col-sm-12 col-md-6">
-          <form id="Mis-Datos-C">
+          <div id="Mis-Datos-C">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputNombre">Nombre:</label>
-                <input type="text" class="form-control" id="inputNombre" placeholder="Nombre">
+                <input type="text" class="form-control" id="nombre" [(ngModel)]="nombre" [readOnly]="true">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputApellido">Apellido:</label>
-                <input type="text" class="form-control" id="inputApellido" placeholder="Apellido">
+                <input type="text" class="form-control" id="apellidos" [(ngModel)]="apellidos" [readOnly]="true">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputCedula">Cedula:</label>
-                <input type="text" class="form-control" id="inputCedula" placeholder="12345678912">
+                <input type="text" class="form-control" id="cedula" [(ngModel)]="cedula" [readOnly]="true">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputEmail">Correo:</label>
-                <input type="text" class="form-control" id="inputEmail" placeholder="ejemplo@gmail.com">
+                <input type="text" class="form-control" id="correo" [(ngModel)]="correo" [readOnly]="true">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputTelefono">Telefono:</label>
-                <input type="text" class="form-control" id="inputTelefono" placeholder="3141234565">
+                <input type="text" class="form-control" id="telefono" [(ngModel)]="telefono" [readOnly]="true">
               </div>
               <div class="form-group col-md-6">
                   <label for="inputProcedimiento">Procedimiento:</label>
@@ -55,7 +55,7 @@
               </div>
             </div>
             <button type="button" id="confirmarCita" class="btn btn-primary">Agendar Cita</button>
-          </form>
+          </div>
         </div>
   </div>
 

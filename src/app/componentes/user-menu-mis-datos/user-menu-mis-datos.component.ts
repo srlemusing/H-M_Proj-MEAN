@@ -31,7 +31,6 @@ declare var Swal:any
     imagen:any = ""
     rol:string = ""
     datos: [] = []
-    Idseleccionado:string = ""
 
 
     cargarestado(){
@@ -47,7 +46,7 @@ declare var Swal:any
         if(res.nombre==""||res.nombre==undefined){
           this.router.navigate(["/login"])
         }
-        this.nombre=res.nombre
+        //this.nombre=res.nombre
         this.rol=res.rol
         this._id =res._id
       })
@@ -77,7 +76,6 @@ declare var Swal:any
     }
 
     EditarId(id:string){
-      this.Idseleccionado=id
       let post = {
         Host:this.peticion.urlHost,
         path:"/usuarios/listId",
@@ -114,13 +112,11 @@ declare var Swal:any
         path:"/usuarios/update",
         payload:{
           usuario:this.usuario,
-          clave:this.clave,
           nombre:this.nombre,
           apellidos:this.apellidos,
           cedula:this.cedula,
           correo:this.correo,
           telefono:this.telefono,
-          rol:this.rol
         }
       }
       console.log(post)
@@ -128,18 +124,15 @@ declare var Swal:any
         (res:any) => {
           console.log(res)
           if(res.state==true){
-
             Swal.fire({
               icon: "success",
               title: "Que Bien!",
               text: res.mensaje,
             });
-
-            $('modal-user').modal('hide')
             this.CargarDatos()
+            $('modal-user').modal('hide')
           }
           else{
-
             Swal.fire({
               icon: "error",
               title: "Ouch!",
@@ -152,7 +145,6 @@ declare var Swal:any
 
     AbrirModal(){
       $('#modal-user').modal('show')
-       this.Idseleccionado = ""
     }
 
 
