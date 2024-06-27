@@ -5,12 +5,13 @@ import { PeticionService } from 'src/app/servicios/peticion.service';
 declare var $:any
 declare var Swal:any
 
+
 @Component({
   selector: 'app-administrar-tratamientos',
   templateUrl: './administrar-tratamientos.component.html',
   styleUrls: ['./administrar-tratamientos.component.css']
 })
-export class AdministrarTratamientosComponent implements OnInit{
+export class AdministrarTratamientosComponent implements OnInit {
 
     ngOnInit(): void {
     this.CargarTodastratamientos()
@@ -25,6 +26,7 @@ export class AdministrarTratamientosComponent implements OnInit{
     datos:any[]=[]
     datostratamientos:any[]=[]
     Idseleccionado:string=""
+    cedula:string = "1"
 
 /**
  * funcion para cargar datos de las tratamientos
@@ -37,13 +39,13 @@ export class AdministrarTratamientosComponent implements OnInit{
       payload:{
       }
     }
-  
+
     this.peticion.Get(post.Host+post.path).then(
       (res:any) => {
         console.log(res)
         this.datos=res.data
       }
-      
+
   )
 
   }
@@ -64,10 +66,11 @@ export class AdministrarTratamientosComponent implements OnInit{
         nombre:this.nombre,
         descripcion:this.descripcion,
         precio:this.precio,
+        estado:1
         // estado:this.estado,
       }
     }
-  
+
 
     this.peticion.Post(post.Host+post.path, post.payload).then(
       (res:any) => {
@@ -103,6 +106,7 @@ export class AdministrarTratamientosComponent implements OnInit{
    * @param id este es el identificador del producto
    */
   EditarId(id:string){
+    console.log("aquiiiiiiiiii",id,this.datos)
     this.Idseleccionado=id
     let post = {
       Host:this.peticion.urlHost,
@@ -111,17 +115,20 @@ export class AdministrarTratamientosComponent implements OnInit{
         _id:id
       }
     }
-  
-    this.peticion.Get(post.Host+post.path).then(
+
+    this.peticion.Post(post.Host+post.path, post.payload).then(
       (res:any) => {
         console.log(res)
-        this.codigo=res.data[0].codigo
-        this.nombre=res.data[0].nombre
-        this.descripcion=res.data[0].descripcion
-        this.precio=res.data[0].precio
-        this._id=res.data[0]._id
-        // this.estado=res.data[0].estado
-        $('#modalnuevo').modal('show')
+        if(res.data != undefined){
+          this.codigo=res.data[0].codigo
+          this.nombre=res.data[0].nombre
+          this.descripcion=res.data[0].descripcion
+          this.precio=res.data[0].precio
+          this._id=res.data[0]._id
+          // this.estado=res.data[0].estado
+          $('#modalnuevo').modal('show')
+        }
+
       }
     )
   }
@@ -133,7 +140,7 @@ export class AdministrarTratamientosComponent implements OnInit{
         _id:this.Idseleccionado
       }
     }
-  
+
     this.peticion.Delete(post.Host+post.path, post.payload).then(
       (res:any) => {
         console.log(res)
@@ -164,14 +171,15 @@ export class AdministrarTratamientosComponent implements OnInit{
       Host:this.peticion.urlHost,
       path:"/tratamientos/update",
       payload:{
+        _id:this.Idseleccionado,
         codigo:this.codigo,
         nombre:this.nombre,
         descripcion:this.descripcion,
         precio:this.precio,
-        // estado:this.estado,
+
       }
     }
-  
+
 
     this.peticion.Put(post.Host+post.path, post.payload).then(
       (res:any) => {
@@ -198,4 +206,5 @@ export class AdministrarTratamientosComponent implements OnInit{
       }
     )
   }
+
 }

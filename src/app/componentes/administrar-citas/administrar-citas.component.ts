@@ -112,7 +112,7 @@ export class AdministrarCitasComponent implements OnInit{
       }
     }
 
-    this.peticion.Get(post.Host+post.path).then(
+    this.peticion.Post(post.Host+post.path, post.payload).then(
       (res:any) => {
         console.log(res)
         if(res.data != undefined){
@@ -168,6 +168,7 @@ export class AdministrarCitasComponent implements OnInit{
       Host:this.peticion.urlHost,
       path:"/citas/update",
       payload:{
+        _id:this.Idseleccionado,
         id_ciudad:this.id_ciudad,
         id_depto:this.id_depto,
         id_usuarioCliente:this.id_usuarioCliente,
