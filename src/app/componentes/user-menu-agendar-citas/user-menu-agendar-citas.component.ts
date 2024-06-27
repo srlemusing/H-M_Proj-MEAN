@@ -14,8 +14,11 @@ declare var Swal:any
 export class UserMenuAgendarCitasComponent implements OnInit{
 
   ngOnInit(): void {
-    this.CargarDatos()
+    this.cargarDatos()
     this.cargarestado()
+    this.cargarTratamientos()
+    this.cargarCiudades()
+    this.cargarDeptos()
   }
 
   constructor(private peticion:PeticionService, private router:Router){}
@@ -37,7 +40,12 @@ export class UserMenuAgendarCitasComponent implements OnInit{
     rol:string = ""
     datos: [] = []
     Idseleccionado:string = ""
-
+    tratamientos: any[] = [];
+    tratamiento: string=''
+    ciudades: any[] = [];
+    ciudad: string=''
+    departamentos: any[] = [];
+    departamento: string=''
 
     cargarestado(){
       var post={
@@ -58,7 +66,7 @@ export class UserMenuAgendarCitasComponent implements OnInit{
       })
     }
 
-    CargarDatos(){
+    cargarDatos(){
       let get = {
         Host:this.peticion.urlHost,
         path:"/citas/listId",
@@ -79,6 +87,52 @@ export class UserMenuAgendarCitasComponent implements OnInit{
             this.telefono=respuesta.data[0].telefono
             this.rol=respuesta.data[0].rol
           }
+        }
+      )
+    }
+
+    cargarTratamientos(){
+      let get = {
+        Host:this.peticion.urlHost,
+        path:"/tratamientos/list",
+        payload:{
+        }
+      }
+      this.peticion.Get(get.Host + get.path).then(
+        (respuesta:any) => {
+          console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",respuesta)
+          this.tratamientos = respuesta.data
+          
+        }
+      )
+    }
+
+    cargarCiudades(){
+      let get = {
+        Host:this.peticion.urlHost,
+        path:"/ciudades/list",
+        payload:{
+        }
+      }
+      this.peticion.Get(get.Host + get.path).then(
+        (respuesta:any) => {
+          this.ciudades = respuesta.data
+
+        }
+      )
+    }
+
+    cargarDeptos(){
+      let get = {
+        Host:this.peticion.urlHost,
+        path:"/departamentos/list",
+        payload:{
+        }
+      }
+      this.peticion.Get(get.Host + get.path).then(
+        (respuesta:any) => {
+          this.departamentos = respuesta.data
+
         }
       )
     }
@@ -110,7 +164,7 @@ export class UserMenuAgendarCitasComponent implements OnInit{
 
 
             $('#modalnuevo').modal('hide')
-            this.CargarDatos()
+            this.cargarDatos()
           }
           else{
 
