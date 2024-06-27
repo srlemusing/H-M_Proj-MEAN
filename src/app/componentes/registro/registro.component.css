@@ -1,4 +1,48 @@
-#FormularioRegistro {
+form.login {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+  }
+
+  button.btnLogin {
+    border: 0px;
+    background: #977744;
+    color: white;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+  }
+
+  button.btnLogin:hover{
+    background: #efefed;
+    color: rgb(136, 101, 14);
+    font-size: 12px;
+  }
+
+  h2.logintext {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  div#marcoregistro {
+    background: beige;
+    width: 50%;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    border-radius: 19px;
+}
+
+
+
+
+
+
+/* #FormularioRegistro {
     padding-bottom: 10px;
     padding-top: 44px;
     border: solid 1px;
@@ -9,3 +53,4 @@
     border-radius: 14px;
 }
 
+ */

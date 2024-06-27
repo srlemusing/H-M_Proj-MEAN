@@ -1,6 +1,30 @@
 <app-header> </app-header>
 
-<div id="FormularioRegistro" class="container">
+
+<div id="marcoregistro" class="container">
+  <div class="row justify-content-center">
+      <div class="col-md-6">
+          <h2 class="logintext">Registrase</h2>
+          <form class="login">
+              <div class="form-group">
+                  <label for="usuario">Email</label>
+                  <input type="text" class="form-control" id="usuario" name="usuario" placeholder="name@example.com">
+              </div>
+              <div class="form-group">
+                <label for="usuario">Usuario</label>
+                <input type="text" class="form-control" id="usuario" name="usuario">
+            </div>
+              <div class="form-group">
+                  <label for="password">Contraseña</label>
+                  <input type="password" class="form-control" id="password" name="clave">
+              </div>
+              <button type="submit" class="btnLogin">Registrarse</button>
+          </form>
+      </div>
+  </div>
+</div>
+
+<!-- <div id="FormularioRegistro" class="container">
     <div class="form-row">
       <div class="col-md-3 mb-3">
         <label for="validationDefault01">nombre</label>
@@ -52,8 +76,6 @@
         <button class="btn btn-primary" type="submit">registrarse</button> 
       </div>
     </div>
-
-   
-</div>
+</div> -->
 
 <app-footer> </app-footer>

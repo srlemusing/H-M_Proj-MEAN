@@ -40,11 +40,12 @@
     border-radius: 5px;
 }
 .acordeon label:hover{
-    background: #3c300d;
+    background: #f6f3ea;
+    color: black;
 }
 .acordeon .contenido-acordeon{
     padding: 0px;
-    margin: 0px 20px;
+/*     margin: 0px 20px; */
     max-height: 0px;
     overflow: hidden;
     transition: all 300ms ease;
@@ -84,3 +85,40 @@
     padding-left: 15%;
 }
 
+.contenedor-acordeon[_ngcontent-ng-c92140963] { /*borde del centro contenido*/
+    width: 79%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: solid 1px #726f1f;
+    border-radius: 17px;
+}
+
+#clicTratamientos {
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: fantasy;
+    color: currentcolor;
+}
+
+#DescripcionInicial {
+    font-size: -webkit-xxx-large;
+    font-family: ui-monospace;
+}
+
+img.card-img-top {
+    width: 50%;
+    display: flex;
+    margin-left: 25%;
+    padding-top: 8px;
+    border-radius: 14px;
+}
+
+.card-body {
+    padding: 8px;
+    font-size: 14px;
+    font-style: oblique;
+    text-align: center;
+    color: currentColor;
+    background: #e7e7e7;
+}

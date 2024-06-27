@@ -5,8 +5,6 @@
 /*Es la regla de la fuente obtenida, la seteamos en la etiqueta body*/
 body{
     font-family: 'Poppins', sans-serif;
-
-
 }
 
 #infGeneral { /*Definimos estilos especificos para el div infGeneral del Home*/
@@ -124,8 +122,6 @@ h6 {
     border: #222121;
     border: 8px;
 }
-
-
 
 #rsociales {
     background: whitesmoke;

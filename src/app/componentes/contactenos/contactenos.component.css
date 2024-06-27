@@ -7,21 +7,89 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-a.navbar-brand { /* definimos estilos al home denominado H&M */
-    background: #feffff;
-    width: 55px;
-    height: 35px;
-    padding: 4px;
-    text-align: center;
-    border-radius: 12px;
-    border: 4px;
-    border-bottom-style: inset;
-    font-weight: 700;
+
+/* es una fuente obtenida de google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Es la regla de la fuente obtenida, la seteamos en la etiqueta body*/
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/* 
+#FormularioCitas {
+    padding-bottom: 10px;
+    padding-top: 44px;
+    border: solid 1px;
+    border-color: antiquewhite;
+    background: beige;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 14px;
+    height: 287px;
+} */
+
+
+.form-group.col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12 { /*Definmos estilos a la descripcion antes del formulario de citas*/
+    margin: auto;
+    text-align: justify;
+    padding-top: 50px;
+    font-size: 16px;
 }
 
-a.navbar-brand:hover { /* definimos estilos de animacion al home denominado H&M */
-    background: #c6b379;
+
+.h1, h1 { /*Definmos estilos especificos al h1 titular antes del formulario de citas (Se efectúa correcciones)*/
+    text-align: center;
+    background: darkkhaki;
+    color: ghostwhite;
+    margin: auto;
+    padding-bottom: 3px;
+    border-radius: 12px;
+    font-size: 24px;
 }
+
+p {
+    margin-top: 10px;
+    margin-bottom: 1rem;
+}
+
+
+.form-check { /*Definimos algunos estilos para los terminos y condiciones*/
+    position: relative;
+    display: block;
+    padding-left: 1.25rem;
+    width: 100%px;
+    text-align: -webkit-match-parent;
+    font-size: 12px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+}
+
+.form-check:hover { /*Definimos animacion hover para los terminos y condiciones*/
+    background: rgb(240, 232, 175);
+    color: rgb(12, 12, 7);
+    border-radius: 10px;
+    width: 100%;
+}
+
+button.btnAgendarCita {
+    border: 0px;
+    background: #977744;
+    color: white;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+  }
+
+  button.btnAgendarCita:hover{
+    background: #efefed;
+    color: rgb(136, 101, 14);
+    font-size: 12px;
+  }
+ 
+
+
 
 button.btn.btn-outline-success.my-2.my-sm-0 { /* definimos estilos a los botones: enviar, suscribirme */
     color: white;
@@ -153,3 +221,9 @@ footer {
     -moz-box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
     box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
 }
+
+div#boton1Contactanos {
+    padding-left: 25px;
+    padding-top: 34px;
+}
+
