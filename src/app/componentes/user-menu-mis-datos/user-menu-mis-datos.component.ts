@@ -99,19 +99,14 @@ declare var Swal:any
             $('modal-user').modal('show')
 
           }    //<-----------podria servir en caso de un error de lectura
-
-
-
         }
       )
     }
-
     Actualizar(){
       let post = {
         Host:this.peticion.urlHost,
         path:"/usuarios/update",
         payload:{
-          usuario:this.usuario,
           nombre:this.nombre,
           apellidos:this.apellidos,
           cedula:this.cedula,
@@ -130,7 +125,7 @@ declare var Swal:any
               text: res.mensaje,
             });
             this.CargarDatos()
-            $('modal-user').modal('hide')
+            $('#modal-user').modal('hide');
           }
           else{
             Swal.fire({
