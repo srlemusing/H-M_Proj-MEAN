@@ -168,7 +168,7 @@ footer {
     box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
 }
 .ventana {
-    width: calc(100% - 215px);
+    width: calc(100% - 220px);
     position: absolute;
     margin-left: 204px;
     border: solid 0px #9d882d;
