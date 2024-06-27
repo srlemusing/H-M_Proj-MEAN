@@ -29,7 +29,7 @@ export class UserMenuMisCitasComponent implements OnInit{
   CargarTodascitas(){
     let post = {
       Host:this.peticion.urlHost,
-      path:"/citas/list",
+      path:"/citas/listUsuario",
       payload:{
       }
     }

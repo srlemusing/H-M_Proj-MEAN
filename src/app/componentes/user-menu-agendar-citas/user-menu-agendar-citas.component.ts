@@ -34,8 +34,10 @@ export class UserMenuAgendarCitasComponent implements OnInit{
     direccion:string = ""
     id_ciudad:string =""
     id_depto:string =""
-    id_usuarioCliente:string =""
-    id_tratamiento:string =""
+
+    fecha: string = '';  // Variable para almacenar la fecha seleccionada
+    hora: string = ''; 
+
     imagen:any = ""
     rol:string = ""
     datos: [] = []
@@ -43,9 +45,9 @@ export class UserMenuAgendarCitasComponent implements OnInit{
     tratamientos: any[] = [];
     tratamiento: string=''
     ciudades: any[] = [];
-    ciudad: string=''
+    ciudad: any=''
     departamentos: any[] = [];
-    departamento: string=''
+    departamento: any = {}
 
     cargarestado(){
       var post={
@@ -56,7 +58,7 @@ export class UserMenuAgendarCitasComponent implements OnInit{
       }
 
       this.peticion.Post(post.Host+post.path,post.payload).then((res:any)=>{
-        console.log("lo que sea",res)
+
         if(res.nombre==""||res.nombre==undefined){
           this.router.navigate(["/login"])
         }
@@ -69,7 +71,7 @@ export class UserMenuAgendarCitasComponent implements OnInit{
     cargarDatos(){
       let get = {
         Host:this.peticion.urlHost,
-        path:"/citas/listId",
+        path:"/usuarios/listId",
         payload:{
           _id:this._id
         }
@@ -100,7 +102,6 @@ export class UserMenuAgendarCitasComponent implements OnInit{
       }
       this.peticion.Get(get.Host + get.path).then(
         (respuesta:any) => {
-          console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",respuesta)
           this.tratamientos = respuesta.data
           
         }
@@ -116,7 +117,12 @@ export class UserMenuAgendarCitasComponent implements OnInit{
       }
       this.peticion.Get(get.Host + get.path).then(
         (respuesta:any) => {
-          this.ciudades = respuesta.data
+          console.log(this.departamento)
+          if (this.departamento) {
+            this.ciudades = respuesta.data.filter((ciudad: any) => ciudad.codigo_depto === this.departamento.codigo);
+          } else {
+            this.ciudades = [];
+          }
 
         }
       )
@@ -137,16 +143,28 @@ export class UserMenuAgendarCitasComponent implements OnInit{
       )
     }
 
+    obtenerFechaHoraCombinada() {
+      if (this.fecha && this.hora) {
+        const fechaHoraCombinada = `${this.fecha} ${this.hora}:00`;
+        console.log(fechaHoraCombinada);
+        return fechaHoraCombinada;
+      } else {
+        return '';
+      }
+    }
+
 
     Guardar(){
+      let fechayhora = this.obtenerFechaHoraCombinada();
       let post = {
         Host:this.peticion.urlHost,
         path:"/citas/save",
         payload:{
-          id_ciudad:this.id_ciudad,
-          id_depto:this.id_depto,
-          id_usuarioCliente:this.id_usuarioCliente,
-          id_tratamiento:this.id_tratamiento
+          id_ciudad:this.ciudad._id,
+          id_depto:this.departamento._id,
+          id_usuarioCliente:this._id,
+          id_tratamiento:this.tratamiento,
+          fechayhora : fechayhora
         }
       }
 
