@@ -51,4 +51,33 @@
     padding-left: 10px;
   }
 
+#Mi-Menu[_ngcontent-ng-c2452111239][_ngcontent-ng-c2452111239] {
+    border: solid 2pxpx beige;
+    width: 210px;
+    height: 99vh;
+    margin-top: 2px;
+    margin-left: 1px;
+    padding: 2px;
+    background-color: f0f0f0;
+    float: left;
+    background-color: #fff2b9;
+    background: bottom;
+    border: solid 2px #d3ca77;
+    margin-left: 12%;
+    margin-top: 5px;
+}
+  
+  div#Mi-Menu[_ngcontent-ng-c2452111239] {
+    border: solid 2pxpx beige;
+    width: 210px;
+    height: 99vh;
+    margin-top: 2px;
+    margin-left: 1px;
+    padding: 2px;
+    background-color: f0f0f0;
+    float: left;
+    background-color: #fff2b9;
+    background: bottom;
+    border: solid 2px #d3ca77;
+}
 
