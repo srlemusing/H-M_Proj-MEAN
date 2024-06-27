@@ -29,14 +29,23 @@ form.login {
     text-align: center;
   }
 
-  div#marcoregistro {
+
+form.login[_ngcontent-ng-c2791229738] {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
     background: beige;
-    width: 50%;
-    margin-top: 18px;
-    margin-bottom: 18px;
     border-radius: 19px;
 }
 
+h2.logintext {
+    background: beige;
+    border-radius: 10px;
+    height: 60px;
+    text-align: center;
+    padding-top: 8px;
+}
 
 
 
