@@ -25,12 +25,11 @@
                 <input type="text" class="form-control" id="telefono" [(ngModel)]="telefono" [readOnly]="true">
               </div>
               <div class="form-group col-md-6">
-                  <label for="inputProcedimiento">Procedimiento:</label>
-                  <select id="inputProcedimiento" class="form-control">
-                      <option selected>Seleccionar...</option>
-                      <option>Valoración</option>
-                      <option>Blanqueamiento</option>
-                      <option>Diseño de sonrisa</option>
+                  <label for="inputProcedimiento">Tratamiento:</label>
+                    <select id="inputTratamiento" class="form-control" [(ngModel)]="tratamiento">
+                      <option *ngFor="let tratam of tratamientos" [value]="tratam._id">
+                        {{ tratam.nombre }}
+                      </option>
                     </select>
                 </div>
             </div>
@@ -45,12 +44,22 @@
               </div>
             </div>
             <div class="form-row">
-              <div class="form-group col-md-4">
+              <div class="form-group col-md-6">
                 <label for="inputCiudad">Ciudad</label>
-                <select id="inputCiudad" class="form-control">
-                  <option selected>Seleccionar...</option>
-                  <option>Medellin</option>
-                  <option>Quibdó</option>
+
+                <select id="inputCiudad" class="form-control" [(ngModel)]="ciudad">
+                  <option *ngFor="let ciud of ciudades" [value]="ciud._id">
+                    {{ ciud.nombre }}
+                  </option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputDepto">Departamento</label>
+
+                <select id="inputDepto" class="form-control" [(ngModel)]="departamento">
+                  <option *ngFor="let depto of departamentos" [value]="depto._id">
+                    {{ depto.nombre }}
+                  </option>
                 </select>
               </div>
             </div>
