@@ -190,6 +190,7 @@ export class AdministrarUsuariosComponent implements OnInit{
       Host:this.peticion.urlHost,
       path:"/usuarios/update",
       payload:{
+        _id:this.Idseleccionado,
         usuario:this.usuario,
         clave:this.clave,
         nombre:this.nombre,
