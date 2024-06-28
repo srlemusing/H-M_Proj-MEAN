@@ -63,14 +63,17 @@ declare var Swal:any
       this.peticion.Get(get.Host + get.path).then(
         (respuesta:any) => {
           console.log(respuesta)
-          this.usuario=respuesta.data[0].usuario
-          this.clave=respuesta.data[0].clave
-          this.nombre=respuesta.data[0].nombre
-          this.apellidos=respuesta.data[0].apellidos
-          this.cedula=respuesta.data[0].cedula
-          this.correo=respuesta.data[0].correo
-          this.telefono=respuesta.data[0].telefono
-          this.rol=respuesta.data[0].rol
+          if(respuesta.data != undefined){
+            this.usuario=respuesta.data[0].usuario
+            this.clave=respuesta.data[0].clave
+            this.nombre=respuesta.data[0].nombre
+            this.apellidos=respuesta.data[0].apellidos
+            this.cedula=respuesta.data[0].cedula
+            this.correo=respuesta.data[0].correo
+            this.telefono=respuesta.data[0].telefono
+            this.rol=respuesta.data[0].rol
+          }
+
         }
       )
     }

@@ -18,6 +18,7 @@ export class RegistroComponent implements OnInit {
     constructor(private peticion:PeticionService){}
 
     clave:String = ""
+    cedula:String = ""
     nombre:String = ""
     correo:String = ""
     estado:Number = 0
@@ -35,6 +36,7 @@ export class RegistroComponent implements OnInit {
         usuario:this.correo,
         clave:this.clave,
         nombre:this.nombre,
+        cedula:this.cedula,
         correo:this.correo,
         estado:this.estado,
         codigoact:this.codigoact,

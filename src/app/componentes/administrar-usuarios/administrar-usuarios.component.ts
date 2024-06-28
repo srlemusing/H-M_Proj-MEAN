@@ -16,6 +16,7 @@ export class AdministrarUsuariosComponent implements OnInit{
   }
 
     constructor(private peticion:PeticionService){}
+    _id:string = ""
     usuario:String = ""
     clave:String = ""
     nombre:String = ""
