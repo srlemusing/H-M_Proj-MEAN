@@ -120,6 +120,7 @@ export class AdministrarUsuariosComponent implements OnInit{
    * @param id este es el identificador del producto
    */
   EditarId(id:string){
+    console.log("xxxxxxxxxxxxxxxxxxxxxx",id)
     this.Idseleccionado=id
     let post = {
       Host:this.peticion.urlHost,
@@ -129,7 +130,7 @@ export class AdministrarUsuariosComponent implements OnInit{
       }
     }
 
-    this.peticion.Get(post.Host+post.path).then(
+    this.peticion.Post(post.Host+post.path, post.payload).then(
       (res:any) => {
         console.log(res)
         if(res.data != undefined){
@@ -193,7 +194,7 @@ export class AdministrarUsuariosComponent implements OnInit{
       payload:{
         _id:this.Idseleccionado,
         usuario:this.usuario,
-        clave:this.clave,
+        //clave:this.clave,
         nombre:this.nombre,
         apellidos:this.apellidos,
         cedula:this.cedula,
