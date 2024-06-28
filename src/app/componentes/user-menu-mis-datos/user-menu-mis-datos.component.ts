@@ -60,7 +60,7 @@ declare var Swal:any
           _id:this._id
         }
       }
-      this.peticion.Get(get.Host + get.path).then(
+      this.peticion.Post(get.Host + get.path, get.payload).then(
         (respuesta:any) => {
           console.log(respuesta)
           if(respuesta.data != undefined){
@@ -87,7 +87,7 @@ declare var Swal:any
         }
       }
 
-      this.peticion.Get(post.Host+post.path).then(
+      this.peticion.Post(post.Host+post.path, post.payload).then(
         (res:any) => {
           console.log(res)
           if(res.data != undefined){

@@ -162,7 +162,7 @@ export class AdministrarUsuariosComponent implements OnInit{
       }
     }
 
-    this.peticion.Delete(post.Host+post.path, post.payload).then(
+    this.peticion.Post(post.Host+post.path, post.payload).then(
       (res:any) => {
         console.log(res)
         if(res.state==true){

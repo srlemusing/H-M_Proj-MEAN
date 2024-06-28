@@ -82,12 +82,12 @@
 
         <div class="form-group col-md-6">
           <label for="inputEmail4">Cedula:</label>
-          <input  name="cedula" type="text" class="form-control" id="cedula" [(ngModel)]="cedula">
+          <input  name="cedula" type="text" class="form-control" id="cedula" [(ngModel)]="cedula" [readOnly]="true">
         </div>
 
         <div class="form-group col-md-6">
           <label for="inputAddress">Correo:</label>
-          <input  name="correo" type="text" class="form-control" id="correo"[(ngModel)]="correo" >
+          <input  name="correo" type="text" class="form-control" id="correo"[(ngModel)]="correo" [readOnly]="true">
         </div>
 
         <div class="form-group col-md-6">

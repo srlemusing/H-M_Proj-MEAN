@@ -36,7 +36,7 @@ export class UserMenuAgendarCitasComponent implements OnInit{
     id_depto:string =""
 
     fecha: string = '';  // Variable para almacenar la fecha seleccionada
-    hora: string = ''; 
+    hora: string = '';
 
     imagen:any = ""
     rol:string = ""
@@ -76,7 +76,7 @@ export class UserMenuAgendarCitasComponent implements OnInit{
           _id:this._id
         }
       }
-      this.peticion.Get(get.Host + get.path).then(
+      this.peticion.Post(get.Host + get.path, get.payload).then(
         (respuesta:any) => {
           console.log(respuesta)
           if(respuesta.data != undefined){
@@ -103,7 +103,7 @@ export class UserMenuAgendarCitasComponent implements OnInit{
       this.peticion.Get(get.Host + get.path).then(
         (respuesta:any) => {
           this.tratamientos = respuesta.data
-          
+
         }
       )
     }
