@@ -9,7 +9,7 @@
 
 .footerSedes {
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 400;
     color: aliceblue;
     background: #7d6917;
     width: 52px;
@@ -20,7 +20,7 @@
 
 .footerTelefonos {
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 400;
     color: aliceblue;
     background: #7d6917;
     width: 70px;
@@ -32,7 +32,7 @@
 
 .footerHorarios {
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 400;
     color: aliceblue;
     background: #7d6917;
     width: 61px;
@@ -78,3 +78,23 @@ footer {
     -moz-box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
     box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
 }
+
+h6 {
+    font-size: 12px;
+    color: mintcream;
+    font-weight: 400;
+    padding-top: 9px;
+    margin-bottom: 0.5rem;
+    line-height: 4px;
+}
+
+/*suscribirse*/
+button.btn.btn-outline-success.my-2.my-sm-0 {
+    color: #b59526;
+    border-color: aliceblue;
+    background: #fdfcf8;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+

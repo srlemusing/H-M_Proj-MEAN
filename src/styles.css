@@ -16,21 +16,34 @@ body{
     padding-top: 20px;
 }
 
-#imgPromos { /*Estilos a la img link de las promociones*/
-    width: 190px;
-    border-radius: 51px;
-    -webkit-box-shadow: 10px -47px 174px -4px rgba(89,255,208,1);
-    -moz-box-shadow: 10px -47px 174px -4px rgba(89,255,208,1);
-    box-shadow: 10px -47px 174px -4px rgba(89,255,208,1);
+
+#imgValora {
+    width: 173px;
+    border-radius: 4px;
+    padding-bottom: 6px;
 }
 
-#imgPromos:hover{ /*Estilos a a las promos*/
-    width: 210px;
-    border-radius: 55px;
-    -webkit-box-shadow: 10px -47px 174px -4px rgba(0,0,0,1);
-    -moz-box-shadow: 10px -47px 174px -4px rgba(0,0,0,1);
-    box-shadow: 10px -47px 174px -4px rgba(0,0,0,1);
+#btnValoracion{
+    width: 135px;
+    height: 50px;
+    font-size: 21px;
+    font-weight: 600;
+    background: white;
+    font-style: oblique;
+    border: solid 2px white;
+    margin-left: 17px;
+    margin-bottom: 4px;
+    border-radius: 8px;
 }
+
+#btnValoracion:hover{
+    background: #4f3d08;
+    font-size: 23px;
+    color: whitesmoke;
+    border: solid 4px 4f3d08;
+    border-radius: 8px;
+}
+
 
 #footer { /* damos algunos estilos al footer */
     background: #c6b379; /* Fondo */

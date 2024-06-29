@@ -7,198 +7,107 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-#footer { /* damos algunos estilos al footer */
-    background: #c6b379; /* Fondo */
-    font-size: 13px; /* Tamaño */
-    padding-top: 15px;
-    padding-bottom: 11px;
+
+
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-color:whitesmoke;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    margin: 30px;
+    width: 80%;
 }
 
-a.navbar-brand { /* definimos estilos al home denominado H&M */
-    background: #feffff;
-    width: 55px;
-    height: 35px;
-    padding: 4px;
-    text-align: center;
-    border-radius: 12px;
-    border: 4px;
-    border-bottom-style: inset;
-    font-weight: 700;
+#misionyvision {
+    margin-left: 17%;
+    width: 65%;
+    border-radius: 20px;
 }
 
-a.navbar-brand:hover { /* definimos estilos de animacion al home denominado H&M */
-    background: #c6b379;
+#misionyvision[_ngcontent-ng-c4271061551] {
+    margin-left: 17%;
+    width: 35%;
+    border-radius: 20px;
+    margin-left: 31%;
 }
 
-button.btn.btn-outline-success.my-2.my-sm-0 { /* definimos estilos a los botones: enviar, suscribirme */
-    color: white;
-    border-color: aliceblue;
-    background: #996410;
-    font-size: 10px;
-    font-weight: 700;
-}
-
-button.btn.btn-outline-success.my-2.my-sm-0:hover{ /* definimos hover a los botones: enviar, suscribirme */
-  background: yellow;
-  color: black;
-}
-
-#nosotros { /*Se define una marge global para el div central del contenido (Aqui se efectuó correción)*/
-    margin: 10px;
-    padding-left: 32px;
-}
-
-/* definimos estilos al contenido del PREfooter en general */
-.footerSedes {
-    font-size: 13px;
-    font-weight: 700;
-    color: aliceblue;
-    background: #7d6917;
-    width: 52px;
-    height: 20px;
-    text-align: center;
-    border-radius: 9px;
-}
-
-.footerTelefonos {
-    font-size: 13px;
-    font-weight: 700;
-    color: aliceblue;
-    background: #7d6917;
-    width: 70px;
-    height: 24px;
-    text-align: center;
-    padding-top: 3px;
-    border-radius: 9px;
-}
-
-.footerHorarios {
-    font-size: 13px;
-    font-weight: 700;
-    color: aliceblue;
-    background: #7d6917;
-    width: 61px;
-    height: 21px;
-    text-align: center;
-    border-radius: 9px;
-}
-
-h6 {
-    font-size: 1rem;
-    color: mintcream;
-    font-weight: 700;
-    padding-top: 9px;
-    margin-bottom: 0.5rem;
-    line-height: 4px;
-}
-
-#LogoSite { /*estilos a la imagen principal*/
-    width: 14%;
-    margin-left: 500px;
-}
-
-
-#rowNosotros {
-    color: black;
-    background: rgb(238, 237, 235);
-    width: 90%;
-    padding: 14px;
-    margin-left: 4%;
-}
-
-.col-12.col-sm-12.col-md-6.col-lg-3.col-lx-3 { /* definimos unos estilos a todo el texto del div Nosotros*/
-    font-size: 13px;
+#valores {
+    display: ruby;
+    height: 484px;
+    font-size: 15px;
     text-align: justify;
+    padding-bottom: 50px;
+    position:unset;
 }
 
-.mision, .vision { /*definimos estilos especificos a las clases mision y vision*/
-    background: #9d882d;
-    color: ghostwhite;
-    font-size: 13px;
-    font-weight: 700;
-    width: 55px;
-    text-align: center;
-    border-radius: 10px;
-}
 
-.valores { /*definimos estilos especificos a la clase valores*/
-    background: #9d882d;
-    color: ghostwhite;
-    font-size: 13px;
-    font-weight: 700;
-    width: 61px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.servicios { /*definimos estilos especificos a la clase servicios*/
-    background: #9d882d;
-    color: ghostwhite;
-    font-size: 13px;
-    font-weight: 700;
-    width: 135px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.quienessomos { /*definimos estilos especificos a la clase quienessomos*/
-    background: #9d882d;
-    color: ghostwhite;
-    font-size: 13px;
-    font-weight: 700;
-    width: 108px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.grupoespecialistas { /*definimos estilos especificos a la clase grupoespecilistas*/
-    background: #9d882d;
-    color: ghostwhite;
-    font-size: 13px;
-    font-weight: 700;
-    width: 95px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-/*Algunos estilos simples a las fotos de los especialistas*/
-/*Se toma fuente de modelado de imagen desde Clippy*/
-
-/* img { 
-    vertical-align: middle;
-    border-style: outset;
-    outline-width: medium;
-    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%); 
-} */
-
-/* Footer, es un dato adicional que aprendí y deseo anexarlo como mi firma al pie del sitio */
-
-footer {
-    /* text-align:center; */
-    background-color: #d9d9da00;
-    color: #222121;
-    font-size: 12px;
-    margin: 3px;
-    width: 60%;
-    margin-left: 2%;
-    height: 13px;
-    padding-bottom: 5px;
+.card-title {
+    margin-bottom: .75rem;
     font-style: oblique;
 }
 
-#HechoPor{
-    font-weight: 700;
-    text-align: center;
-    list-style: none;   
-    text-decoration: none;
-    color: #691919;
-    padding-bottom: 3px;
+#quienes\ somos {
+    width: 65%;
+    margin-left: 15%;
+    padding-bottom: 10px;
 }
 
-#HechoPor:hover{
-    background: rgb(255, 255, 16);
-    color: black;
-    -webkit-box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
-    -moz-box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
-    box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
+#PHespecialistas:hover{
+    cursor: pointer;
+    background: whitesmoke;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.card-img, .card-img-bottom {
+    padding: 17px;
+    border-radius: 45px;
+}
+
+.card-img, .card-img-top {
+    padding: 17px;
+    border-radius: 45px;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+    background: beige;
+    border-radius: 25px;
+    border: solid rgb(220, 183, 60) 1px;
+}
+
+.card-body:hover {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+#misionyvision[_ngcontent-ng-c2836227652] {
+    margin-left: 24%;
+    width: 50%;
+    border-radius: 20px;
+}
+
+.card-body[_ngcontent-ng-c2836227652] {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 0.25rem;
+    background: beige;
+    padding: 23px;
+    border-radius: 26px;
 }
