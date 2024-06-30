@@ -42,11 +42,11 @@ export class UserMenuAgendarCitasComponent implements OnInit{
     rol:string = ""
     datos: [] = []
     Idseleccionado:string = ""
-    tratamientos: any[] = [];
+    tratamientos: any[] = []
     tratamiento: string=''
-    ciudades: any[] = [];
-    ciudad: any=''
-    departamentos: any[] = [];
+    ciudades: any[] = []
+    ciudad: any={}
+    departamentos: any[] = []
     departamento: any = {}
 
     cargarestado(){

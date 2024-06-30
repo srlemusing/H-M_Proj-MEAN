@@ -52,22 +52,22 @@
         <div class="modal-body">
 
             <div class="form-group">
-                <label for="id_ciudad">Ciudad</label>
-                <select id="inputCiudad" class="form-control" [(ngModel)]="ciudad">
-                  <option *ngFor="let ciud of ciudades" [ngValue]="ciud">
-                    {{ ciud.nombre }}
+              <label for="inputDepto">Departamento</label>
+                <select id="inputDepto" class="form-control" [(ngModel)]="departamento" (change)="cargarCiudades()">
+                  <option *ngFor="let item of departamentos" [ngValue]="item">
+                    {{ item.nombre }}
                   </option>
                 </select>
             </div>
 
-            <div class="form-group">
-              <label for="id_depto">Departamento</label>
-                <select id="inputDepto" class="form-control" [(ngModel)]="departamento" (change)="cargarCiudades()">
-                  <option *ngFor="let depto of departamentos" [ngValue]="depto">
-                    {{ depto.nombre }}
+              <div class="form-group">
+                <label for="inputCiudad">Ciudad</label>
+                <select id="inputCiudad" class="form-control" [(ngModel)]="ciudad">
+                  <option *ngFor="let item of ciudades" [ngValue]="item">
+                    {{ item.nombre }}
                   </option>
                 </select>
-            </div>
+              </div>
 
             <div class="form-group">
               <label for="id_usuarioCliente">Usuario</label>
@@ -76,9 +76,9 @@
 
             <div class="form-group">
               <label for="inputProcedimiento">Tratamiento:</label>
-                <select id="inputTratamiento" class="form-control" [(ngModel)]="tratamiento">
-                  <option *ngFor="let tratam of tratamientos" [value]="tratam._id">
-                    {{ tratam.nombre }}
+                <select id="inputTratamiento" class="form-control" [(ngModel)]="tratamientos">
+                  <option *ngFor="let item of tratamientos" [value]="item">
+                    {{ item.nombre }}
                   </option>
                 </select>
             </div>

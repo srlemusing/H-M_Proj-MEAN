@@ -20,10 +20,10 @@ export class AdministrarCitasComponent implements OnInit{
 
     constructor(private peticion:PeticionService){}
     _id:string = ""
-    id_ciudad:any[]=[]
-    id_depto:any[]=[]
-    id_usuarioCliente:any[]=[]
-    id_tratamiento:any[]=[]
+    id_ciudad:string=""
+    id_depto:string=""
+    id_usuarioCliente:string=""
+    id_tratamiento:string=""
     fecha:String = ""
     hora:String = ""
     fechayhora:String=""
@@ -32,11 +32,11 @@ export class AdministrarCitasComponent implements OnInit{
     Idseleccionado:string=""
     estado:Number=1
 
-    tratamientos: any[] = [];
+    tratamientos: any[] = []
     tratamiento: string=''
-    ciudades: any[] = [];
-    ciudad: any=''
-    departamentos: any[] = [];
+    ciudades: any[] = []
+    ciudad: any= {}
+    departamentos: any[] = []
     departamento: any = {}
     usuarios: any[]=[]
 
@@ -140,10 +140,10 @@ export class AdministrarCitasComponent implements OnInit{
 
   AbrirModal(){
 
-    this.id_ciudad = []
-    this.id_depto = []
-    this.id_usuarioCliente = []
-    this.id_tratamiento = []
+    this.id_ciudad = ""
+    this.id_depto = ""
+    this.id_usuarioCliente = ""
+    this.id_tratamiento = ""
     this.fechayhora = ""
     $('#modalnuevo').modal('show')
   }

@@ -1,6 +1,8 @@
 <app-menu-dashboard></app-menu-dashboard>
 <div class="ventana">
+  
   <div class="titulo">Agendar Citas</div>
+
       <div id="Mis-Datos-C" class="col-sm-12 col-md-6">
           <div id="Mis-Datos-C">
             <div class="form-row">
@@ -8,22 +10,27 @@
                 <label for="inputNombre">Nombre:</label>
                 <input type="text" class="form-control" id="nombre" [(ngModel)]="nombre" [readOnly]="true">
               </div>
+
               <div class="form-group col-md-6">
                 <label for="inputApellido">Apellido:</label>
                 <input type="text" class="form-control" id="apellidos" [(ngModel)]="apellidos" [readOnly]="true">
               </div>
+
               <div class="form-group col-md-6">
                 <label for="inputCedula">Cedula:</label>
                 <input type="text" class="form-control" id="cedula" [(ngModel)]="cedula" [readOnly]="true">
               </div>
+
               <div class="form-group col-md-6">
                 <label for="inputEmail">Correo:</label>
                 <input type="text" class="form-control" id="correo" [(ngModel)]="correo" [readOnly]="true">
               </div>
+
               <div class="form-group col-md-6">
                 <label for="inputTelefono">Telefono:</label>
                 <input type="text" class="form-control" id="telefono" [(ngModel)]="telefono" [readOnly]="true">
               </div>
+
               <div class="form-group col-md-6">
                   <label for="inputProcedimiento">Tratamiento:</label>
                     <select id="inputTratamiento" class="form-control" [(ngModel)]="tratamiento">
@@ -33,32 +40,34 @@
                     </select>
                 </div>
             </div>
+
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputFecha">Fecha:</label>
                 <input type="date" class="form-control" id="inputFecha" [(ngModel)]="fecha">
               </div>
+
               <div class="form-group col-md-6">
                 <label for="inputHora">Hora:</label>
                 <input type="time" class="form-control" id="inputHora" [(ngModel)]="hora">
               </div>
             </div>
+
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputDepto">Departamento</label>
-
                 <select id="inputDepto" class="form-control" [(ngModel)]="departamento" (change)="cargarCiudades()">
-                  <option *ngFor="let depto of departamentos" [ngValue]="depto">
-                    {{ depto.nombre }}
+                  <option *ngFor="let item of departamentos" [ngValue]="item">
+                    {{ item.nombre }}
                   </option>
                 </select>
-              </div>
+            </div>
+
               <div class="form-group col-md-6">
                 <label for="inputCiudad">Ciudad</label>
-
                 <select id="inputCiudad" class="form-control" [(ngModel)]="ciudad">
-                  <option *ngFor="let ciud of ciudades" [ngValue]="ciud">
-                    {{ ciud.nombre }}
+                  <option *ngFor="let item of ciudades" [ngValue]="item">
+                    {{ item.nombre }}
                   </option>
                 </select>
               </div>
