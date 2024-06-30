@@ -15,15 +15,16 @@
                 <th scope="col">Usuario</th>
                 <th scope="col">Tratamiento</th>
                 <th scope="col">Fecha y Hora</th>
+                <th scope="col">Estado</th>
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let item of datos" (click)="EditarId(item._id)" [ngStyle]="{'background': item.color}">
 
-                <td>{{item.id_ciudad}}</td>
-                <td>{{item.id_depto}}</td>
-                <td>{{item.id_usuarioCliente}}</td>
-                <td>{{item.id_tratamiento}}</td>
+                <td>{{item.id_ciudad.nombre}}</td>
+                <td>{{item.id_depto.nombre}}</td>
+                <td>{{item.id_usuarioCliente.nombre}}</td>
+                <td>{{item.id_tratamiento.nombre}}</td>
                 <td>{{item.fechayhora}}</td>
 
                 <td>
@@ -52,12 +53,20 @@
 
             <div class="form-group">
                 <label for="id_ciudad">Ciudad</label>
-                <input type="email" class="form-control" id="id_ciudad" [(ngModel)]="id_ciudad">
+                <select id="inputCiudad" class="form-control" [(ngModel)]="ciudad">
+                  <option *ngFor="let ciud of ciudades" [ngValue]="ciud">
+                    {{ ciud.nombre }}
+                  </option>
+                </select>
             </div>
 
             <div class="form-group">
               <label for="id_depto">Departamento</label>
-              <input type="email" class="form-control" id="id_depto" [(ngModel)]="id_depto">
+                <select id="inputDepto" class="form-control" [(ngModel)]="departamento" (change)="cargarCiudades()">
+                  <option *ngFor="let depto of departamentos" [ngValue]="depto">
+                    {{ depto.nombre }}
+                  </option>
+                </select>
             </div>
 
             <div class="form-group">
@@ -66,17 +75,36 @@
             </div>
 
             <div class="form-group">
-              <label for="fechayhora">Fecha y Hora"</label>
-              <input type="fechayhora" class="form-control" id="fechayhora" [(ngModel)]="fechayhora">
+              <label for="inputProcedimiento">Tratamiento:</label>
+                <select id="inputTratamiento" class="form-control" [(ngModel)]="tratamiento">
+                  <option *ngFor="let tratam of tratamientos" [value]="tratam._id">
+                    {{ tratam.nombre }}
+                  </option>
+                </select>
             </div>
 
             <!-- <div class="form-group">
+              <label for="fechayhora">Fecha y Hora"</label>
+              <input type="fechayhora" class="form-control" id="fechayhora" [(ngModel)]="fechayhora">
+            </div> -->
+
+            <div class="form-group">
+              <label for="inputFecha">Fecha:</label>
+              <input type="date" class="form-control" id="inputFecha" [(ngModel)]="fecha">
+            </div>
+
+            <div class="form-group">
+              <label for="inputHora">Hora:</label>
+              <input type="time" class="form-control" id="inputHora" [(ngModel)]="hora">
+            </div>
+
+            <div class="form-group">
                 <label for="estado">Estado</label>
                 <select class="form-control" id="estado" [(ngModel)]="estado">
                   <option value="0">Inactivo</option>
                   <option value="1">Activo</option>
                 </select>
-              </div> -->
+              </div>
 
 
         </div>

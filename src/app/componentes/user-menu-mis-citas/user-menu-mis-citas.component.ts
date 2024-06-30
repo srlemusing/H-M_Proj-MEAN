@@ -26,6 +26,7 @@ export class UserMenuMisCitasComponent implements OnInit{
     datoscitas:any[]=[]
     Idseleccionado:string=""
     estado:Number = 1
+    fechayhora:String=""
 
 
   CargarTodascitas(){
