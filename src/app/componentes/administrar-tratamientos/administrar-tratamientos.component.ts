@@ -27,6 +27,7 @@ export class AdministrarTratamientosComponent implements OnInit {
     datostratamientos:any[]=[]
     Idseleccionado:string=""
     cedula:string = "1"
+    estado:Number = 1
 
 /**
  * funcion para cargar datos de las tratamientos
@@ -53,8 +54,7 @@ export class AdministrarTratamientosComponent implements OnInit {
   AbrirModal(){
     this.codigo = ""
     this.nombre = ""
-    // this.estado = 1
-    this.Idseleccionado = ""
+    this.estado = 1
     $('#modalnuevo').modal('show')
   }
   Guardar(){
@@ -66,8 +66,7 @@ export class AdministrarTratamientosComponent implements OnInit {
         nombre:this.nombre,
         descripcion:this.descripcion,
         precio:this.precio,
-        estado:1
-        // estado:this.estado,
+        estado:this.estado,
       }
     }
 
@@ -125,7 +124,7 @@ export class AdministrarTratamientosComponent implements OnInit {
           this.descripcion=res.data[0].descripcion
           this.precio=res.data[0].precio
           this._id=res.data[0]._id
-          // this.estado=res.data[0].estado
+          this.estado=res.data[0].estado
           $('#modalnuevo').modal('show')
         }
 
@@ -141,7 +140,7 @@ export class AdministrarTratamientosComponent implements OnInit {
       }
     }
 
-    this.peticion.Delete(post.Host+post.path, post.payload).then(
+    this.peticion.Post(post.Host+post.path, post.payload).then(
       (res:any) => {
         console.log(res)
         if(res.state==true){
@@ -176,7 +175,7 @@ export class AdministrarTratamientosComponent implements OnInit {
         nombre:this.nombre,
         descripcion:this.descripcion,
         precio:this.precio,
-
+        estado:this.estado
       }
     }
 

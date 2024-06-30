@@ -16,14 +16,16 @@ export class UserMenuMisCitasComponent implements OnInit{
   }
 
     constructor(private peticion:PeticionService){}
-    id_ciudad:any[]=[]
-    id_depto:any[]=[]
+    id_ciudad:String = ""
+    id_depto:String = ""
     id_usuarioCliente:any[]=[]
     id_tratamiento:any[]=[]
-    fechayhora:any[]=[]
+    fecha:String = ""
+    hora:String = ""
     datos:any[]=[]
     datoscitas:any[]=[]
     Idseleccionado:string=""
+    estado:Number = 1
 
 
   CargarTodascitas(){

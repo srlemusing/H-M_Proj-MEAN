@@ -62,8 +62,8 @@ export class AdministrarUsuariosComponent implements OnInit{
     this.correo = ""
     this.telefono = ""
     this.estado = 1
-    this.codigoact = ""
-    this.rol = 1
+    // this.codigoact = ""
+    this.rol = 3
     this.Idseleccionado = ""
     $('#modalnuevo').modal('show')
   }
@@ -194,7 +194,6 @@ export class AdministrarUsuariosComponent implements OnInit{
       payload:{
         _id:this.Idseleccionado,
         usuario:this.usuario,
-        //clave:this.clave,
         nombre:this.nombre,
         apellidos:this.apellidos,
         cedula:this.cedula,

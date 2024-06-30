@@ -10,13 +10,10 @@
               <tr>
 
                 <th scope="col">Usuario/Correo</th>
-                <!-- <th scope="col">Clave</th> -->
                 <th scope="col">Nombre</th>
                 <th scope="col">Apellidos</th>
                 <th scope="col">Cédula</th>
-                <!-- <th scope="col">Correo</th> //queda oculto poruq es el mismo usuario -->
                 <th scope="col">Teléfono</th>
-                <th scope="col">Codigo de Activación</th>
                 <th scope="col">Estado</th>
                 <th scope="col">Rol</th>
               </tr>
@@ -25,14 +22,10 @@
               <tr *ngFor="let item of datos" (click)="EditarId(item._id)" [ngStyle]="{'background': item.color}">
 
                 <td>{{item.usuario}}</td>
-                <!-- <td>{{item.clave}}</td> -->
                 <td>{{item.nombre}}</td>
                 <td>{{item.apellidos}}</td>
                 <td>{{item.cedula}}</td>
-                <!-- <td>{{item.correo}}</td> -->
                 <td>{{item.telefono}}</td>
-                <td>{{item.codigoact}}</td>
-                <!-- <td>{{item.rol}}</td> -->
 
                 <td>
                   <div *ngIf="item.estado==1">Activo</div>
@@ -78,11 +71,6 @@
               <input type="email" class="form-control" id="usuario" [(ngModel)]="usuario">
             </div>
 
-            <!-- <div class="form-group">
-              <label for="clave">Clave</label>
-              <input type="email" class="form-control" id="clave" [(ngModel)]="clave">
-            </div> -->
-
             <div class="form-group">
                 <label for="nombre">Nombre</label>
                 <input type="email" class="form-control" id="nombre" [(ngModel)]="nombre">
@@ -106,11 +94,6 @@
             <div class="form-group">
               <label for="correo">Correo</label>
               <input type="email" class="form-control" id="correo" [(ngModel)]="correo">
-            </div>
-
-            <div class="form-group">
-              <label for="codigoact">Codigo de Activación</label>
-              <input type="codigoact" class="form-control" id="codigoact" [(ngModel)]="codigoact">
             </div>
 
             <div class="form-group">
