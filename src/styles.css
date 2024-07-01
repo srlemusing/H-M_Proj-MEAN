@@ -180,6 +180,7 @@ footer {
     -moz-box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
     box-shadow: 19px -16px 110px -34px rgba(31,31,31,0.96);
 }
+
 .ventana {
     width: calc(100% - 220px);
     position: absolute;
@@ -190,6 +191,7 @@ footer {
     overflow-x: auto;
     border: solid 0px;
 }
+
 .titulo {
     background: #9d882d;
     color: white;

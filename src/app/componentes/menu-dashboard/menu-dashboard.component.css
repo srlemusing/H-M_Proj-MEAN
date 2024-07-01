@@ -1,4 +1,4 @@
-  div#Mi-Menu {
+  #Mi-Menu {
     border: solid 0px ;
     width: 210px;
     height: 99vh;
@@ -8,8 +8,10 @@
     border-radius: 20px;
     background-color: f0f0f0;
     float: left;
-    background-color: #9d882d;
+    background-color: beige;
   }
+
+
   div#Datos-Usuario img {
     width: 150px;
     height: 150px;
@@ -18,6 +20,7 @@
     margin-top: 12px;
     margin-bottom: 10px;
   }
+
   .lblnombre {
     width: 100%;
     text-align: center;
@@ -25,6 +28,7 @@
     font-weight: 500;
     color: rgb(0, 0, 0);
   }
+  
   .lblrol {
     width: 100%;
     text-align: center;
@@ -45,12 +49,21 @@
   }
   .itemmenu:hover{
     margin-left: 10px;
-    color: rgb(180, 180, 180);
+    color: rgb(251, 251, 251);
+    font-size: 16px;
+    background: rgb(135, 114, 35);
+    border-radius: 4px;
+    width: auto;
   }
   .opciones {
     padding-left: 10px;
   }
 
+  .opciones:hover {
+    background: rgb(235, 235, 171);
+
+    border-radius: 14px;
+  }
 /* #Mi-Menu[_ngcontent-ng-c2452111239][_ngcontent-ng-c2452111239] {
     border: solid 2pxpx beige;
     width: 210px;

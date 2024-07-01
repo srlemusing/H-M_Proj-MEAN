@@ -1,3 +1,33 @@
+
+div#datos1 {
+  margin-left: 10%;
+  border: solid beige;
+  border-radius: 13px;
+  background: whitesmoke;
+  padding-top: 6px;
+}
+
+.h4, h4 {
+  font-size: 23px;
+  font-style: oblique;
+  color: whitesmoke;
+  background: #867824;
+  width: fit-content;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 19px;
+  text-align: justify;
+  padding-bottom: 4px;
+}
+
+
+
 /* .ventana {
     position: absolute;
     margin-left: 215px;
