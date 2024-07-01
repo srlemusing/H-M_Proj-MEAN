@@ -1,7 +1,13 @@
 
 div#Mis-Datos-C {
   margin-left: 5px;
-}
+    border: solid 1px;
+    border-radius: 12px;
+    padding: 12px;
+    margin-left: 10px;
+    color: #9d882d;
+  }
+
 
 .ventana {
   position: absolute;

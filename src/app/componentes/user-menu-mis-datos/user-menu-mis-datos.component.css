@@ -5,4 +5,10 @@ button.btn.btn-primary {
 .titulo{
   width: 98%;
 }
-
+div#Mis-Datos-C {
+  border: solid 1px;
+  border-radius: 12px;
+  padding: 12px;
+  margin-left: 10px;
+  color: #9d882d;
+}

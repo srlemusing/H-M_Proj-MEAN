@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Host, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PeticionService } from 'src/app/servicios/peticion.service';
@@ -17,7 +18,7 @@ declare var Swal:any
       this.cargarestado()
     }
 
-    constructor(private peticion:PeticionService, private router:Router){}
+    constructor(private peticion:PeticionService, private router:Router, private http:HttpClient){}
 
     _id:string = ""
     usuario:string = ""
@@ -146,6 +147,34 @@ declare var Swal:any
     }
 
 
+
+
+    selectFile:any = {
+      name:""
+    }
+    avatarSeleccionado(event:any){
+      this.selectFile = event.target.files[0]
+      console.log(this.avatarSeleccionado.name)
+    }
+
+    Upload(){
+
+      const formData = new FormData
+      formData.append("image", this.selectFile, this.selectFile.name)
+
+      var post = {
+        host:this.peticion.urlHost,
+        path:"/upload"
+      }
+      this.http.post(post.host + post.path, formData).subscribe((respuesta)=> {
+        console.log(respuesta)
+      }, (error)=>{
+        console.log(error)
+      })
+
+
+
+    }
 
 
   }
