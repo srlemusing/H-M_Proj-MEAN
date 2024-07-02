@@ -7,9 +7,6 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-
-
-
 .card {
     position: relative;
     display: flex;
@@ -24,8 +21,8 @@ body{
 }
 
 #misionyvision {
-    margin-left: 17%;
-    width: 65%;
+    margin-left: 13%;
+    width: 70%;
     border-radius: 20px;
 }
 
@@ -52,8 +49,8 @@ body{
 }
 
 #quienes\ somos {
-    width: 65%;
-    margin-left: 15%;
+    width: fit-content;
+    margin-left: auto;
     padding-bottom: 10px;
 }
 
@@ -93,7 +90,7 @@ p {
     padding: 1.25rem;
     background: rgb(255, 255, 255);
     cursor: pointer;
-    font-size: 16px;
+
 }
 
 
