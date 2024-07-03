@@ -51,9 +51,10 @@ export class RegistroComponent implements OnInit {
             icon: "success",
             title: "Que Bien!",
             text: res.mensaje,
-          });
-        }
-        else{
+          }).then(() => {window.location.href = "http://localhost:4200/login"
+        });
+      }
+      else{
           Swal.fire({
             icon: "error",
             title: "Ouch!",
