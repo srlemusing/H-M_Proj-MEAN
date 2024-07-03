@@ -22,6 +22,19 @@ div#Mis-Datos-C {
   text-align: justify; */
 }
 
+button#confirmarCita {
+  margin-left: 4px;
+  background: #b59d3e;
+  color: #faf9f9;
+  border: solid 3px #b7a906;
+}
+
+
+button#confirmarCita:hover {
+  background: #fafaf9;
+  color:black;
+  font-size: 14px;
+}
 /* .titulo {
   background: #cbb762;
   color: white;

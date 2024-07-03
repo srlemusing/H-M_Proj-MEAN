@@ -23,6 +23,8 @@ declare var Swal:any
     _id:string = ""
     usuario:string = ""
     clave:string = ""
+    clave1:string = ""
+    clave2:string = ""
     nombre:string = ""
     apellidos:string = ""
     cedula:string = ""
@@ -106,7 +108,8 @@ declare var Swal:any
         }
       )
     }
-    Actualizar(){
+
+    Actualizar(){ //Actualiza user
       let post = {
         Host:this.peticion.urlHost,
         path:"/usuarios/update",
@@ -118,6 +121,7 @@ declare var Swal:any
           telefono:this.telefono,
         }
       }
+      
       console.log(post)
       this.peticion.Put(post.Host+post.path, post.payload).then(
         (res:any) => {
@@ -142,11 +146,57 @@ declare var Swal:any
       )
     }
 
+    ActualizarClave(){ //Actualiza Clave
+
+      if (this.clave1 != this.clave2 || this.clave1 == null || this.clave1 == "") {
+        Swal.fire({
+          icon: "error",
+          title: "Ouch!",
+          text: "Las clave no coinciden, por favor verifica!",
+        });
+      } else{
+        let post = {
+          Host:this.peticion.urlHost,
+          path:"/usuarios/update",
+          payload:{
+            
+            clave:this.clave1
+          }
+        }
+        
+        console.log(post)
+        this.peticion.Put(post.Host+post.path, post.payload).then(
+          (res:any) => {
+            console.log(res)
+            if(res.state==true){
+              Swal.fire({
+                icon: "success",
+                title: "Que Bien!",
+                text: res.mensaje,
+              });
+              this.CargarDatos()
+              $('#modal-user').modal('hide');
+            }
+            else{
+              Swal.fire({
+                icon: "error",
+                title: "Ouch!",
+                text: res.mensaje,
+              });
+            }
+          }
+        )
+      }
+    }
+
+
     AbrirModal(){
       $('#modal-user').modal('show')
     }
 
-
+    AbrirModalClave(){
+      $('#modal-clave').modal('show')
+    }
 
 
     selectFile:any = {

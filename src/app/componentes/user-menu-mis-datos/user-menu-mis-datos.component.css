@@ -12,3 +12,16 @@ div#Mis-Datos-C {
   margin-left: 10px;
   color: #9d882d;
 }
+
+button.btn.btn-success {
+  margin-left: 4px;
+  background: #b59d3e;
+  color: #faf9f9;
+  border: solid 3px #b7a906;
+}
+
+button.btn.btn-success:hover {
+  background: #fafaf9;
+  color:black;
+  font-size: 14px;
+}
