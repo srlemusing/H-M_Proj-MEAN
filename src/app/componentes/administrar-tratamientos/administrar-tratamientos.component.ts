@@ -55,6 +55,7 @@ export class AdministrarTratamientosComponent implements OnInit {
     this.codigo = ""
     this.nombre = ""
     this.estado = 1
+    this.Idseleccionado = ""
     $('#modalnuevo').modal('show')
   }
   Guardar(){
