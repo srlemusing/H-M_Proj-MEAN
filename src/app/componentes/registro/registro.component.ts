@@ -29,6 +29,17 @@ export class RegistroComponent implements OnInit {
     // Idseleccionado:string=""
 
   Guardar(){
+
+    this.cedula = this.cedula.replace(/[^0-9]/g, "");
+
+  if (this.cedula.length < 8 || this.cedula.length > 15) {
+    Swal.fire({
+      icon: "warning",
+      title: "¡Atención!",
+      text: "La cédula debe tener entre 8 y 15 caracteres y contener solo números.",
+    });
+    return; // Detiene la ejecución si no cumple con las condiciones
+  }
     let post = {
       Host:this.peticion.urlHost,
       path:"/usuarios/save",
