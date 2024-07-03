@@ -71,7 +71,7 @@
 
             <div class="form-group">
               <label for="inputUsuarioCliente">Usuario</label>
-              <select id="inputUsuarioCliente" class="form-control" [(ngModel)]="id_usuarioCliente">
+              <select id="inputUsuarioCliente" class="form-control" [(ngModel)]="usuario">
                 <option *ngFor="let item of usuarios" [ngValue]="item">
                   {{ item.nombre }}
                 </option>
@@ -81,8 +81,8 @@
 
             <div class="form-group">
               <label for="inputProcedimiento">Tratamiento:</label>
-                <select id="inputTratamiento" class="form-control" [(ngModel)]="tratamientos">
-                  <option *ngFor="let item of tratamientos" [value]="item">
+                <select id="inputTratamiento" class="form-control" [(ngModel)]="tratamiento">
+                  <option *ngFor="let item of tratamientos" [ngValue]="item">
                     {{ item.nombre }}
                   </option>
                 </select>

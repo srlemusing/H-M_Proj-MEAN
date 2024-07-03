@@ -1,6 +1,8 @@
 
     <div id="Mi-Menu">
       <div id="Datos-Usuario">
+
+          <!-- <div><img src="http://localhost:3000/uploads/667a53093a8f55bd011238a1.png"></div> -->
           <div *ngIf="rol=='1'"><img src="http://localhost:3000/uploads/{{_id}}.png"></div>
           <div *ngIf="rol=='2'"><img src="http://localhost:3000/uploads/{{_id}}.png"></div>
           <div *ngIf="rol=='3'"><img src="http://localhost:3000/uploads/{{_id}}.png"></div>
@@ -16,8 +18,8 @@
           <div *ngIf="rol == '1' || rol == '2'" class="itemmenu" routerLink="/administrar-usuarios">Administrar Usuarios</div>
           <div *ngIf="rol == '1' || rol == '2'" class="itemmenu" routerLink="/administrar-citas">Administrar Citas</div>
           <div *ngIf="rol == '1' || rol == '2'"  class="itemmenu" routerLink="/administrar-tratamientos">Administrar Tratamientos</div>
-          <div class="itemmenu" routerLink="/user-menu-agendar-citas">Agendar Citas</div>
-          <div class="itemmenu" routerLink="/user-menu-mis-citas">Mis Citas</div>
+          <div *ngIf="rol == '3'" class="itemmenu" routerLink="/user-menu-agendar-citas">Agendar Citas</div>
+          <div *ngIf="rol == '3'" class="itemmenu" routerLink="/user-menu-mis-citas">Mis Citas</div>
           <div class="itemmenu" routerLink="/user-menu-mis-datos">Mis Datos</div>
           <div class="itemmenu" (click)="CerrarSession()">Salir</div>
       </div>

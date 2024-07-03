@@ -16,6 +16,7 @@ export class AdministrarCitasComponent implements OnInit{
     this.cargarTratamientos()
     this.cargarCiudades()
     this.cargarDeptos()
+    this.cargarUsuarios()
   }
 
     constructor(private peticion:PeticionService){}
@@ -33,12 +34,13 @@ export class AdministrarCitasComponent implements OnInit{
     estado:Number=1
 
     tratamientos: any[] = []
-    tratamiento: string=''
+    tratamiento: any={}
     ciudades: any[] = []
     ciudad: any= {}
     departamentos: any[] = []
     departamento: any = {}
     usuarios: any[]=[]
+    usuario:any={}
 
 /**
  * funcion para cargar datos de las citas
@@ -81,14 +83,14 @@ export class AdministrarCitasComponent implements OnInit{
   cargarUsuarios(){
     let get = {
       Host:this.peticion.urlHost,
-      path:"/usuarios/list",
+      path:"/usuarios/listClientes",
       payload:{
       }
     }
     this.peticion.Get(get.Host + get.path).then(
       (respuesta:any) => {
         this.usuarios = respuesta.data
-
+        console.log(this.usuarios)
       }
     )
   }
@@ -142,9 +144,10 @@ export class AdministrarCitasComponent implements OnInit{
 
     this.id_ciudad = ""
     this.id_depto = ""
-    this.id_usuarioCliente = ""
+    this.id_usuarioCliente = "Steban123"
     this.id_tratamiento = ""
     this.fechayhora = ""
+    this.Idseleccionado = ""
     $('#modalnuevo').modal('show')
   }
 
@@ -156,8 +159,9 @@ export class AdministrarCitasComponent implements OnInit{
       payload:{
         id_ciudad:this.ciudad._id,
         id_depto:this.departamento._id,
-        id_usuarioCliente:this._id,
-        id_tratamiento:this.tratamiento
+        id_usuarioCliente:this.usuario._id,
+        id_tratamiento:this.tratamiento._id,
+        fechayhora : fechayhora
       }
     }
 
