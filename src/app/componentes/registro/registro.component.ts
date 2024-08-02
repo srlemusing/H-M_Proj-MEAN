@@ -62,7 +62,7 @@ export class RegistroComponent implements OnInit {
             icon: "success",
             title: "Que Bien!",
             text: res.mensaje,
-          }).then(() => {window.location.href = "http://localhost:4200/login"
+          }).then(() => {window.location.href = "http://0.0.0.0:4200/login"
         });
       }
       else{
