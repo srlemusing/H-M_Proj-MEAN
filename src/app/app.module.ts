@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,6 +27,11 @@ import { UserMenuMisCitasComponent } from './componentes/user-menu-mis-citas/use
 import { UserMenuAgendarCitasComponent } from './componentes/user-menu-agendar-citas/user-menu-agendar-citas.component';
 import { FormsModule } from '@angular/forms';
 import { InterceptorService } from './servicios/interceptor.service';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { citasReducer } from '../store/citas.reducer';
+import { CitasEffects } from '../store/citas.effects';
 
 @NgModule({
   declarations: [
@@ -56,10 +61,14 @@ import { InterceptorService } from './servicios/interceptor.service';
   ],
 
   imports: [
+    StoreModule.forRoot({ citas: citasReducer }),
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot({ citas: citasReducer }),
+    EffectsModule.forRoot([CitasEffects]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,
