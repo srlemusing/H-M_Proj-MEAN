@@ -1,0 +1,24 @@
+<!-- src/app/components/mis-citas/mis-citas.component.html -->
+<div class="citas-container">
+    <h2>Mis Citas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Hora</th>
+          <th>Paciente</th>
+          <th>Odontólogo</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cita of citas$ | async">
+          <td>{{ cita.fecha }}</td>
+          <td>{{ cita.hora }}</td>
+          <td>{{ cita.paciente }}</td>
+          <td>{{ cita.odontologo }}</td>
+          <td>{{ cita.estado }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

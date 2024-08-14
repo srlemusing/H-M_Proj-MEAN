@@ -1,5 +1,10 @@
-import { NgModule } from '@angular/core';
+
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms'; // Importa ReactiveFormsModule
+
+import { StoreModule } from '@ngrx/store';
+import { citasReducer } from './store/citas.reducer';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +32,12 @@ import { UserMenuMisCitasComponent } from './componentes/user-menu-mis-citas/use
 import { UserMenuAgendarCitasComponent } from './componentes/user-menu-agendar-citas/user-menu-agendar-citas.component';
 import { FormsModule } from '@angular/forms';
 import { InterceptorService } from './servicios/interceptor.service';
+import { AgendarCitasComponent } from './componentes/agendar-citas/agendar-citas.component';
+import { MisCitasComponent } from './componentes/mis-citas/mis-citas.component';
+
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
 
 @NgModule({
   declarations: [
@@ -52,14 +63,20 @@ import { InterceptorService } from './servicios/interceptor.service';
     UserMenuMisCitasComponent,
     UserMenuAgendarCitasComponent,
     AdministrarUsuariosComponent,
-    UserMenuComponent
+    UserMenuComponent,
+    AgendarCitasComponent,
+    MisCitasComponent,
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot({ citas: citasReducer }),
+    EffectsModule.forRoot([]),
+    ReactiveFormsModule, // Añade ReactiveFormsModule aquí
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

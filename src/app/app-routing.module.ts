@@ -20,6 +20,8 @@ import { UserMenuMisCitasComponent } from './componentes/user-menu-mis-citas/use
 import { UserMenuMisDatosComponent } from './componentes/user-menu-mis-datos/user-menu-mis-datos.component';
 import { MenuDashboardComponent } from './componentes/menu-dashboard/menu-dashboard.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
+import { AgendarCitasComponent} from './componentes/agendar-citas/agendar-citas.component';
+import { MisCitasComponent } from './componentes/mis-citas/mis-citas.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent, pathMatch:"full"},
@@ -42,9 +44,9 @@ const routes: Routes = [
   {path:"user-menu-mis-citas",component:UserMenuMisCitasComponent,pathMatch:"full"},
   {path:"user-menu-mis-datos",component:UserMenuMisDatosComponent,pathMatch:"full"},
   {path:"administrar-usuarios",component:AdministrarUsuariosComponent,pathMatch:"full"},
-  {path:"dashboard",component:DashboardComponent,pathMatch:"full"}
-
-
+  {path:"dashboard",component:DashboardComponent,pathMatch:"full"},
+  {path:"agendar-citas",component:AgendarCitasComponent,pathMatch:"full"},
+  {path:"mis-citas",component:MisCitasComponent,pathMatch:"full"},  
 ];
 
 @NgModule({
