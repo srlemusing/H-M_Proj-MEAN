@@ -221,30 +221,6 @@ export class UserMenuAgendarCitasComponent implements OnInit{
       this.store.dispatch(CitasActions.agendarCita({ cita }));
 
     }
-/*
-Guardar() {
-  const fechayhora = this.obtenerFechaHoraCombinada();
-  const cita: Cita = {
-    id_ciudad: this.ciudad._id,
-    id_depto: this.departamento._id,
-    id_usuarioCliente: this._id,
-    id_tratamiento: this.tratamiento,
-    fechayhora: fechayhora
-  };
-    
-  console.log("Por ejecutar addCitas")
-  this.store.dispatch(CitasActions.addCitas({cita}))
-  //this.citas$ = this.store.select(state => state.citas);
 
-console.log("CITAS ",this.citas)
-console.log("CITAS ",this.citas$)
-this.citas$.subscribe(citas => {
-  console.log('Citas desde el store:', citas);
-});
-
-  console.log('Dispatching agendarCita with:', cita);
-  this.store.dispatch(CitasActions.agendarCita({ cita }));
-}
-*/
 
 }

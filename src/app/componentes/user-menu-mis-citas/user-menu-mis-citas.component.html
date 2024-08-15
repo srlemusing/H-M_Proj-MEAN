@@ -2,10 +2,49 @@
 
 <div class="ventana">
 
-  <div class="titulo">Mis Citas</div>
+  <div class="titulo">Mis Citas de hoy</div>
   <!-- <div class="btnadd" (click)="AbrirModal()">+</div> -->
-  <div class="datos">
 
+  <div class="datos">
+    <!-- Tabla de citas agendadas -->
+      <table class="table table-hover">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Departamento</th>
+            <th scope="col">Usuario</th>
+            <th scope="col">Tratamiento</th>
+            <th scope="col">Fecha y Hora</th>
+            <th scope="col">Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngIf="(citas$ | async) as citas; else noData">
+            <tr *ngFor="let item of citas$ | async">
+              <td>{{ item.id_ciudad.nombre }}</td>
+              <td>{{ item.id_depto.nombre }}</td>
+              <td>{{ item.id_usuarioCliente.nombre }}</td>
+              <td>{{ item.id_tratamiento.nombre }}</td>
+              <td>{{ item.fechayhora }}</td>
+              <td>
+                <div *ngIf="item.estado == 1">Activo</div>
+                <div *ngIf="item.estado == 0">Inactivo</div>
+              </td>
+            </tr>
+          </ng-container>
+          <ng-template #noData>
+            <tr>
+              <td colspan="6" class="text-center">Aún sin datos</td>
+            </tr>
+          </ng-template>
+        </tbody>
+      </table>
+      </div>
+  
+
+      <div class="titulo">Mis Citas</div>
+  <div class="datos">
+<!-- Tabla de citas agendadas -->
       <table class="table table-hover">
           <thead class="thead-light">
             <tr>
@@ -38,6 +77,7 @@
       </table>
   </div>
 </div>
+
 
 <!-- Modal -->
 <div class="modal fade" id="modalnuevo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

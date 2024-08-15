@@ -11,7 +11,7 @@ export class PeticionService {
 
   constructor(private http: HttpClient) { }
 
-  urlHost:string="http://localhost:3000"
+  urlHost:string="http://3.144.169.237:3000"
 
   Post(url:string,data:{}){
 

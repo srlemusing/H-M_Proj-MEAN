@@ -1,9 +1,8 @@
 import { Component, Host, OnInit } from '@angular/core';
 import { PeticionService } from 'src/app/servicios/peticion.service';
-
+import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
-
-import { cargarCitas } from '../../../store/citas.actions';
+import { selectCitas } from '../../../store/citas.selectors';
 
 import { CitaRes, RespuestaCitas } from '../../../store/cita.model';
 
@@ -16,6 +15,9 @@ declare var Swal:any
   styleUrls: ['./user-menu-mis-citas.component.css']
 })
 export class UserMenuMisCitasComponent implements OnInit{
+
+  citas$: Observable<CitaRes[]>=this.store.pipe(select(selectCitas));
+
 
   citas: CitaRes[] = [];
   cargando = false;
