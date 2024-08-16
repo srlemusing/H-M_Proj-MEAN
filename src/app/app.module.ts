@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> b15de3d58bdaa14b2ef7aa00f4f7faaefd1b1d35
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms'; // Importa ReactiveFormsModule
@@ -32,12 +35,20 @@ import { UserMenuMisCitasComponent } from './componentes/user-menu-mis-citas/use
 import { UserMenuAgendarCitasComponent } from './componentes/user-menu-agendar-citas/user-menu-agendar-citas.component';
 import { FormsModule } from '@angular/forms';
 import { InterceptorService } from './servicios/interceptor.service';
+<<<<<<< HEAD
 import { AgendarCitasComponent } from './componentes/agendar-citas/agendar-citas.component';
 import { MisCitasComponent } from './componentes/mis-citas/mis-citas.component';
 
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
+=======
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { citasReducer } from '../store/citas.reducer';
+import { CitasEffects } from '../store/citas.effects';
+>>>>>>> b15de3d58bdaa14b2ef7aa00f4f7faaefd1b1d35
 
 @NgModule({
   declarations: [
@@ -69,13 +80,18 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
   ],
 
   imports: [
+    StoreModule.forRoot({ citas: citasReducer }),
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     StoreModule.forRoot({ citas: citasReducer }),
+<<<<<<< HEAD
     EffectsModule.forRoot([]),
     ReactiveFormsModule, // Añade ReactiveFormsModule aquí
+=======
+    EffectsModule.forRoot([CitasEffects]),
+>>>>>>> b15de3d58bdaa14b2ef7aa00f4f7faaefd1b1d35
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],
   providers: [{

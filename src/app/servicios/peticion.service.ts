@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ResponsePost,RespuestaCitas } from '../../store/cita.model';
 
 declare var Swal:any
 
@@ -17,6 +18,30 @@ export class PeticionService {
     let promise = new Promise((resolve,reject) => {
 
       this.http.post(url,data).toPromise().then(
+        (res:any) => {
+          if(res.permisos==true){
+            Swal.fire({
+              title:"Ouch!",
+              text:res.mensaje,
+              icon:"error"
+            });
+          }
+          resolve(res)
+        }
+      ).catch((error) => {
+        reject(error)
+      })
+    })
+    return promise
+  }
+
+  Post2(path:string,data:{}){
+
+    const url = `${this.urlHost}${path}`;
+
+    let promise = new Promise<ResponsePost>((resolve,reject) => {
+
+      this.http.post<ResponsePost>(url,data).toPromise().then(
         (res:any) => {
           if(res.permisos==true){
             Swal.fire({
@@ -80,6 +105,28 @@ export class PeticionService {
       })
 
   })
+
+  
+
+  return promise
+
+  }
+
+  Get2(url:string){
+
+    let promise = new Promise<RespuestaCitas>((resolve,reject) => {
+
+      this.http.get<RespuestaCitas>(url).toPromise().then(
+        (res:any) => {
+          resolve(res)
+        }
+      ).catch((error) => {
+        reject(error)
+      })
+
+  })
+
+  
 
   return promise
 

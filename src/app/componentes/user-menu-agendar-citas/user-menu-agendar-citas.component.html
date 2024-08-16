@@ -34,7 +34,7 @@
               <div class="form-group col-md-6">
                   <label for="inputProcedimiento">Tratamiento:</label>
                     <select id="inputTratamiento" class="form-control" [(ngModel)]="tratamiento">
-                      <option *ngFor="let tratam of tratamientos" [value]="tratam._id">
+                      <option *ngFor="let tratam of tratamientos" [ngValue]="tratam">
                         {{ tratam.nombre }}
                       </option>
                     </select>
@@ -76,7 +76,40 @@
             <button type="button" id="confirmarCita" class="btn btn-success" (click)="Guardar()">Agendar Cita</button>
           </div>
         </div>
+        
+        <div>
+          <br>
+          <h3>Número de citas agendadas hoy: {{ numeroDeCitas$ | async }}</h3>
+
+
+          <br>
+        
+          <!-- Tabla de citas agendadas -->
+          <h3 style="margin-bottom: 10px;">Citas agendadas</h3>
+          <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+            <thead>
+              <tr>
+                <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Ciudad</th>
+                <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Departamento</th>
+                <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Cliente</th>
+                <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Tratamiento</th>
+                <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Fecha y Hora</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let cita of citas$ | async">
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{ cita.id_ciudad.nombre }}</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{ cita.id_depto.nombre }}</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{ cita.id_usuarioCliente.nombre }}</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{ cita.id_tratamiento.nombre }}</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{ cita.fechayhora }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
   </div>
+
+
 
 
 

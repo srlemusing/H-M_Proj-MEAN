@@ -1,6 +1,12 @@
 import { Component, Host, OnInit } from '@angular/core';
 import { PeticionService } from 'src/app/servicios/peticion.service';
 
+import { Store, select } from '@ngrx/store';
+
+import { cargarCitas } from '../../../store/citas.actions';
+
+import { CitaRes, RespuestaCitas } from '../../../store/cita.model';
+
 declare var $:any
 declare var Swal:any
 
@@ -11,11 +17,15 @@ declare var Swal:any
 })
 export class UserMenuMisCitasComponent implements OnInit{
 
+  citas: CitaRes[] = [];
+  cargando = false;
+  error: any;
+
   ngOnInit(): void {
     this.CargarTodascitas()
   }
 
-    constructor(private peticion:PeticionService){}
+    constructor(private peticion:PeticionService,private store: Store){}
     id_ciudad:String = ""
     id_depto:String = ""
     id_usuarioCliente:any[]=[]
@@ -43,6 +53,44 @@ export class UserMenuMisCitasComponent implements OnInit{
       }
   )
   }
+
+//cargar citas con un observable no se deberia llamar api.
+
+
+
+  cargarTodasCitas2() {
+    this.cargando = true;
+    const url = `${this.peticion.urlHost}/citas/listUsuario`;
+
+    this.peticion.Get2(url).then(
+      (res: RespuestaCitas) => {
+        if (res.state) {
+          this.datos = res.data;
+        } else {
+          this.error = 'No se pudieron cargar las citas.';
+        }
+      }
+    ).catch(error => {
+      this.error = 'Error al cargar las citas.';
+    }).finally(() => {
+      this.cargando = false;
+    });
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   AbrirModal(){
     $('#modalnuevo').modal('show')
   }
