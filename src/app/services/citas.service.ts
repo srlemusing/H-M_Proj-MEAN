@@ -28,7 +28,7 @@ import { Cita } from '../models/cita.model';
   providedIn: 'root'
 })
 export class CitasService {
-  private apiUrl = 'http://localhost:4200/mis-citas'; // Reemplaza con tu URL
+  private apiUrl = 'http://localhost:4200/'; // Reemplaza con tu URL
 
   constructor(private http: HttpClient) {}
 

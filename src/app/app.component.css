@@ -1,0 +1,9 @@
+form.ng-untouched.ng-pristine.ng-invalid {
+    border: solid 2px #254671;
+    padding: 21px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    background: beige;
+    font-family: sans-serif;
+    }
