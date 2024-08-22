@@ -213,11 +213,13 @@ export class AdministrarCitasComponent implements OnInit{
       (res:any) => {
         console.log(res)
         if(res.data != undefined){
-          this.id_ciudad=res.data[0].id_ciudad
-          this.id_depto=res.data[0].id_depto
-          this.id_usuarioCliente=res.data[0].id_usuarioCliente
-          this.id_tratamiento=res.data[0].id_tratamiento
+          this.ciudad=res.data[0].id_ciudad
+          this.departamento=res.data[0].id_depto
+          console.log("this.departamento ",this.departamento)
+          this.usuario=res.data[0].id_usuarioCliente
+          this.tratamiento=res.data[0].id_tratamiento
           this.fechayhora=res.data[0].fechayhora
+          this.estado = res.data[0].estado
           $('#modalnuevo').modal('show')
         }      //<-----------podria servir en caso de un error de lectura
 
@@ -266,11 +268,12 @@ export class AdministrarCitasComponent implements OnInit{
       path:"/citas/update",
       payload:{
         _id:this.Idseleccionado,
-        id_ciudad:this.id_ciudad,
-        id_depto:this.id_depto,
-        id_usuarioCliente:this.id_usuarioCliente,
-        id_tratamiento:this.id_tratamiento,
-        fechayhora:this.fechayhora
+        //id_ciudad:this.id_ciudad,
+        //id_depto:this.id_depto,
+        //id_usuarioCliente:this.id_usuarioCliente,
+        //id_tratamiento:this.id_tratamiento,
+        //fechayhora:this.fechayhora,
+        estado:this.estado
       }
     }
 
